@@ -1,4 +1,4 @@
-<!--  ctrl + / закоментировать или раскоментировать -->
+<!--  ctrl + / закомментировать или раскомментировать -->
 <!-- Это сайт внутри которого я хочу разместить всякие примеры для себя того что я изучил по html, css, js -->
 <!-- коммент -->
 <!DOCTYPE html>
@@ -12,16 +12,15 @@
      Например, механизмы поисковых систем обращаются к метатегам для получения описания сайта, ключевых слов и других данных -->
     <meta charset="utf-8"> <!-- кодировка текста -->
     <script src="script.js"></script> <!-- подключаем скрипт -->
-    <title>Test HTML+CSS+JS </title> <!-- прописываем заголовок -->
+    <title>Test HTML </title> <!-- прописываем заголовок -->
     <!--Определяет заголовок документа. Элемент <title> не является частью документа и не показывается напрямую на веб-странице.
       В операционной системе Windows текст заголовка отображается в левом верхнем углу окна браузера.
       Допускается использовать только один тег <title> на документ и размещать его в контейнере <head>.  -->
 
-    <!-- подключаем подсветку синтаксиса -->
-    <link rel="stylesheet" href="highlight/styles/atom-one-dark.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-
     <style>
+        body{
+            font-family: Calibri, sans-serif;
+        }
         .flex-container {
             display: flex;
             /* Использует flexbox для контейнера */
@@ -39,9 +38,29 @@
             padding: 0.6rem ;
             background-color: lightgray;
         }
+
+        table {
+            margin-bottom: 20px;
+            border: 1px solid green;
+            border-collapse: collapse;
+        }
+
+        table th {
+            font-weight: bold;
+            padding: 5px;
+            background: whitesmoke;
+            border: 1px solid red;
+        }
+
+        table td {
+            border: 1px solid green;
+            padding: 5px;
+        }
     </style>
 
-
+    <!-- подключаем подсветку синтаксиса -->
+    <link rel="stylesheet" href="highlight/styles/atom-one-dark.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
 </head>
 
 <body>
@@ -105,7 +124,7 @@
         <img src="img/2024-03-14_08-49-53.png" alt="код">
     </div>
     <div class="flex-div">
-        <p> горизонтальная линия при помощи тэга <b>hr</b></p>
+        <p> Горизонтальная линия при помощи тэга <b>hr</b></p>
         <hr>
         <!-- горизонтальная линия -->
     </div>
@@ -117,7 +136,7 @@
     </div>
     <div class="flex-div">
             <pre>
-            текст с запоминанием          проблелов
+            текст с запоминанием          пробелов
             и
             переносов строки
             Другими словами - блок предварительно
@@ -183,7 +202,7 @@
     </div>
     <div class="flex-div">
         <ol>
-            <!--маркированый список внутри нумерованного списка.-->
+            <!--маркированный список внутри нумерованного списка.-->
             <li>Профессия JavaScript
                 <ul>
                     <li>Frontend</li>
@@ -197,50 +216,86 @@
 <!-- ----------------------------------------------------------------------------------------------- -->
 <div class="flex-container">
     <div class="flex-div">
-        <img src="img/2024-03-15_08-51-55.png" alt="код">
+        <pre>
+            <code>
+&lttable&gt
+    &lt!--таблица.--&gt
+    &lth3&gtКонтроллеры Segnetics&lt/h3&gt
+    &lt!--Заголовок.--&gt
+    &ltthead&gt
+    &lt!--заголовки столбцов таблицы.--&gt
+    &lttr&gt
+        &ltth&gtНазвание&lt/th&gt
+        &ltth&gtЦена&lt/th&gt
+    &lt/tr&gt
+    &lt/thead&gt
+    &lttbody&gt
+    &lt!--тело таблицы.--&gt
+    &lttr&gt
+        &lt!--строка--&gt
+        &lttd&gtPixel&lt/td&gt
+        &lttd&gt20 000 руб&lt/td&gt
+    &lt/tr&gt
+    &lttr&gt
+        &lt!--строка--&gt
+        &lttd&gtMatrix&lt/td&gt
+        &lttd&gt30 000 руб&lt/td&gt
+    &lt/tr&gt
+    &lt/tbody&gt
+&lt/table&gt
+            </code>
+        </pre>
     </div>
     <div class="flex-div">
+        <!--таблица.-->
+        <h3>Контроллеры Segnetics</h3>
         <table>
-            <!--таблица.-->
-            <caption style="color: black">Ассортимент шоколада «Hexlet»</caption>
-            <!--Заголовок.-->
+             <!--Заголовок.-->
             <thead>
             <!--заголовки столбцов таблицы.-->
             <tr>
-                <th>Вкусняшка</th>
-                <th>Вес</th>
+                <th>Название</th>
+                <th>Цена</th>
             </tr>
             </thead>
             <tbody>
             <!--тело таблицы.-->
             <tr>
                 <!--строка-->
-                <td>Шоколад «Тота»</td>
-                <td>100 грамм</td>
+                <td>Pixel</td>
+                <td>20 000 руб</td>
             </tr>
             <tr>
                 <!--строка-->
-                <td>Шоколад «Тота TeamLead»</td>
-                <td>150 грамм</td>
+                <td>Matrix</td>
+                <td>30 000 руб</td>
             </tr>
             </tbody>
         </table>
         <p>
-            - tr - это сокращение от "table row". Используется для создания строки в таблице.
+            <b>tr</b> - "table row". Используется для создания строки в таблице.
         </p>
         <p>
-            - td - это сокращение от "table data". Используется для создания ячейки таблицы, которая содержит данные.
+            <b>td</b> - "table data". Используется для создания ячейки таблицы, которая содержит данные.
         </p>
         <p>
-            - th - это сокращение от "table header". Используется для создания заголовочной ячейки в таблице,
-            которая обычно содержит название столбца или строки.
+            <b>th</b> - это сокращение от "table header". Используется для создания заголовочной ячейки в таблице.
         </p>
+
+
     </div>
 </div>
 <!-- ----------------------------------------------------------------------------------------------- -->
 <div class="flex-container">
     <div class="flex-div">
-        <img src="img/2024-03-15_13-37-23.png" alt="код">
+        <pre><code class="language-html">
+&lth2&gtИзучаем тэг a&lt/h2&gt
+&lt!-- Тег "а" является одним из важных элементов HTML и предназначен для создания ссылок. --&gt
+&ltp&gt&lta href="https://sibplc.ru/"&gtссылка на наш сайт&lt/a&gt&lt/p&gt
+&ltp&gt&lta href="https://sibplc.ru/" target="_blank"&gtСсылка на наш сайт в новом окне&lt/a&gt&lt/p&gt
+&ltp&gt&lta href="https://sibplc.ru/" target="_blank" title="подсказка"&gt
+    Ссылка на наш сайт в новом окне со всплывающей подсказкой &lt/a&gt&lt/p&gt
+        </code></pre>
     </div>
     <div class="flex-div">
         <h2>Изучаем тэг a</h2>
@@ -251,3 +306,62 @@
             Ссылка на наш сайт в новом окне со всплывающей подсказкой </a></p>
     </div>
 </div>
+
+<!--подсветка синтаксиса кода-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
