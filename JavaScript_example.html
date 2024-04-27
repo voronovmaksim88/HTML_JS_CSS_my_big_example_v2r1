@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<!-- Элемент <!DOCTYPE> предназначен для указания типа текущего документа, html означает что тип HTML5 -->
+<html lang="en" dir="ltr">
+<!-- язык английский, определяет направление и отображение текста — слева направо  -->
+
+<head>
+    <meta charset="utf-8"> <!-- кодировка текста -->
+    <script src="script.js"></script> <!-- подключаем скрипт -->
+    <title>Test HTML+CSS+JS </title> <!-- прописываем заголовок -->
+    <style>
+        body {
+            background: lightgray; /* Цвет фона таблицы */
+        }
+
+        * {
+            font-family: Calibri, sans-serif;
+        }
+
+        /* звёздочка означает что стиль будет применен ко всем элементам страницы */
+        /* В этом случае, если шрифт Calibri недоступен, браузер будет использовать любой доступный шрифт*/
+        /* из семейства sans-serif, что гарантирует сохранение общего вида и читаемости текста*/
+        /* на вашем сайте или в приложении.*/
+
+        h1 {
+            color: darkgreen;
+            font-size: 500%;
+            text-align: center;
+            margin: 0;
+        }
+
+        h2 {
+        }
+
+        ul {
+            color: rgb(0, 128, 0);
+        }
+
+        table {
+            border: 0.5em solid black;
+            background: maroon; /* Цвет фона таблицы */
+            color: white; /* Цвет текста */
+        }
+
+        td {
+            background: navy; /* Цвет фона ячеек */
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        .flex-container {
+            display: flex;
+            /* Использует flexbox для контейнера */
+            /* Дополнительные стили для наглядности */
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-bottom: 1em;
+            background: #c8c8c8; /* Цвет фона ячеек */
+        }
+
+        .flex-div {
+            flex-grow: 1;
+            /* Элементы будут расти, чтобы заполнить доступное пространство */
+            /* Дополнительные стили для наглядности */
+            border: 2px solid green;
+            box-sizing: border-box;
+            margin: 0.8em;
+            padding: 0.8em;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(26, 9, 9, 0.4);
+            width: 50%;
+            background: #a0a0a0; /* Цвет фона ячеек */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <!-- подключаем подсветку синтаксиса -->
+    <link rel="stylesheet" href="highlight/styles/atom-one-dark.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+</head>
+
+<body>
+<h1 style="margin-top: 0.2em">JavaScript</h1>
+<div class="flex-container">
+    <div class="flex-div">
+        <pre><code class="language-javascript">
+    console.log('Hello World!'); // Пишем в консоль
+    document.getElementById('Div_Hello_World').innerHTML += 'hello word from JS';
+        </code></pre>
+    </div>
+    <div class="flex-div" id="Div_Hello_World">
+    </div>
+</div>
+<script>
+    console.log('Hello World!'); // Пишем в консоль
+    document.getElementById('Div_Hello_World').innerHTML += 'hello word from JS';
+</script>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <img src="img/2024-03-12_19-41-20.png" alt="код">
+    </div>
+    <div class="flex-div">
+        <img src="img/2024-03-12_20-29-29.png" alt="код">
+        <hr>
+        <input type="button" onclick="sb_yra()" value="button Yes!">
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <img src="img/2024-03-12_23-09-15.png" alt="код">
+    </div>
+    <div class="flex-div" id="Div_new_text">
+        <img src="img/2024-03-12_23-10-01.png" alt="код">
+        <hr>
+        <button id="changeTextBtn" onclick="changeTextBtnClick()">Добавить текст</button>
+        <hr>
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <pre><code class="language-javascript">
+// создаём константу и выводим её
+const constNum = 123;
+document.getElementById('Div_Const').innerHTML += ('&ltp&gt' + constNum + '&lt/p&gt');
+
+// создаём константу заданного типа
+/**
+ * @type {string}
+ */
+const constStr= "Это строка. Если дать число, то IDE подсветит ошибку." +
+    " Потому что в проекте включёна проверка  типов // @ts-check";
+document.getElementById('Div_Const').innerHTML += ('&ltp&gt' + constStr + '&lt/p&gt');
+        </code></pre>
+    </div>
+    <div class="flex-div" id="Div_Const">
+        <h3>Константы</h3>
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <img src="img/2024-03-16_13-17-01.png" alt="код">
+    </div>
+    <div class="flex-div" id="Div_varString">
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <img src="img/2024-03-20_12-10-17.png" alt="код">
+    </div>
+    <div class="flex-div" id="Div_object1">
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <img src="img/2024-03-20_14-30-38.png" alt="код">
+    </div>
+    <div class="flex-div" id="div_expression">
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <img src="img/2024-03-21_14-03-51.png" alt="код">
+    </div>
+    <div class="flex-div" id="div_dynamic_typing">
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <img src="img/2024-03-21_23-34-20.png" alt="код">
+    </div>
+    <div class="flex-div" id="div_no_dynamic_typing">
+        <div>
+            <h2>Избежание динамической типизации</h2>
+        </div>
+        <div>
+            <img src="img/2024-03-21_23-36.png" alt="код">
+        </div>
+        <div>
+            <label>
+                <button onclick="but_change_num()">Записать число</button>
+                <button onclick="but_change_str()">Записать строку</button>
+            </label>
+        </div>
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <img src="img/2024-03-24_12-00-12.png" alt="код">
+    </div>
+    <div class="flex-div" id="div_object2">
+        <div>
+            <h2>Объект это ссылочный тип</h2>
+        </div>
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <img src="img/2024-03-26_12-35-31.png" alt="код">
+    </div>
+    <div class="flex-div" id="div_object3">
+        <div>
+            <h2>Управление объектом</h2>
+        </div>
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <img src="img/2024-03-27_18-53-27.png" alt="код">
+    </div>
+    <div class="flex-div" id="div_object4">
+        <h2>Вложенный объект</h2>
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <pre><code class="language-javascript">
+    const myName = "Max"
+    const age = 34
+    const Me = {
+        myName,
+        age,
+        happy: true
+    }
+        </code></pre>
+    </div>
+
+    <div class="flex-div" id="div_object5">
+        <h2>Объявление объекта через переменные</h2>
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <pre><code class="language-javascript">
+        const myHome = {
+        material: "wood",
+        address: function () {
+            console.log("Novosibirsk")
+            }
+        }
+        myHome.address()
+        </code></pre>
+    </div>
+
+    <div class="flex-div" id="div_method">
+        <h2>Метод - это свойство объекта значение которого функция</h2>
+        <p>В данном примере address это метод объекта myHome</p>
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <pre><code class="language-javascript">
+    // Json
+    let person = JSON.parse('{"name": "Ivan", "age":11}')
+        </code></pre>
+    </div>
+
+    <div class="flex-div" id="div_JSON1">
+        <h2>JSON</h2>
+        <p>Java script object notation.
+            Это формат обмена данными между компьютерами в интернете.
+            JSON передаётся просто в виде строки
+            Сервер может прислать объект в виде JSON-строки.
+            Для превращения такой строки в объект над её распарсить. JSON.parse()
+        </p>
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div class="flex-container">
+    <div class="flex-div">
+        <pre><code class="language-javascript">
+// JSON.stringify
+let car = {
+    color: "red",
+    price: 10
+}
+const div_JSON2 = document.getElementById('div_JSON2');
+div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
+        </code></pre>
+    </div>
+
+    <div class="flex-div" id="div_JSON2">
+        <h2>JSON.stringify()</h2>
+        <p>
+            Если надо наоборот передать объект на сервер,
+            то используется метод <b>JSON.stringify()</b>, преобразующий объект в JSON-строку
+        </p>
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+
+<!--подсветка синтаксиса кода-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
+
+</body>
+</html>
+
+<script>
+    // -------Мутации в JS-------
+    document.write("<br/>", "<h3>", "Мутации в JS", "</h3>")
+    let num_1 = 1234
+    console.log(num_1)
+    let num_2;
+    num_2 = num_1;
+    console.log(num_2)
+    num_2 = 12345
+    console.log(num_1)
+    console.log(num_2)
+    // переменная хранит непосредственно само своё значение
+
+
+    const plane = {
+        weight: 10
+    }
+    console.log(plane)
+    plane.manufacturer = "Russia"
+    console.log(plane)
+    document.write("<br/>", "plane", JSON.stringify(plane), "<br/>")
+    // несмотря на то что объект plane это константа всё равно он мутировал, потому что объект это ссылочный тип
+    // ссылка осталась без изменений.
+
+    // мутация через копию
+    const plane2 = plane
+    plane2.loadCapacity = 100 // грузоподъемность
+    console.log(plane2)
+    console.log(plane)
+    document.write("<br/>", "plane1", JSON.stringify(plane), "<br/>")
+    document.write("plane2", JSON.stringify(plane2), "<br/>")
+    // plane2 и plane хранят ссылки на один и тот же объект в памяти, мутация одного объекта приводит к мутации второго
+    // Повторимся, объект - это ссылочный тип
+
+    // ------------- Как избежать мутации вариант 1-------------------
+    const men = {
+        age: 40,
+        height: 183
+    }
+
+    const women = Object.assign({}, men)
+    women.age = 33
+    console.log("men", men)
+    document.write("<br/>", "men", JSON.stringify(men), "<br/>")
+    console.log("women ", women)
+    document.write("women", JSON.stringify(women), "<br/>")
+    // но при таком подходе если свойство объекта это тоже объект то такое свойство не будет скопировано
+    // поэтому такой метод подходит только когда свойства НЕ объекты
+
+    // ------------- Как избежать мутации вариант 2-------------------
+    // ... оператор разделения объекта на свойства
+    const girl = {...men}
+    girl.age = 8
+    console.log("girl", girl)
+    document.write("girl", JSON.stringify(girl), "<br/>")
+    // но опять же если есть свойство объекта которое тоже объект то такое свойство не будет скопировано
+    // поэтому такой метод тоже походит только когда свойства НЕ объекты
+
+    // ------------- Как избежать мутации вариант 3-------------------
+    const boy = JSON.parse(JSON.stringify(men))
+    boy.age = 7
+    console.log("boy", boy)
+    document.write("boy", JSON.stringify(boy), "<br/>", "<br/>")
+    // Такой метод подходит даже когда свойства - объекты
+
+
+    // ------------------ФУНКЦИИ -----------------------------------------------
+    document.write("<h3>", "ФУНКЦИИ", "</h3>")
+    // ФУНКЦИИ - это блок кода который можно выполнять многократно
+    // пример объявления функции
+    function sum(a, b) { // a и b это параметры функции, sum - очевидно имя функции
+        const c = a + b // параметры внутри функции ведут себя как переменные
+        console.log(c) // параметры функции доступны очевидно только внутри функции
+        return c // это результат, который вернёт функция, если его не написать то функция вернёт undefined
+        // после return функция уже не выполняет инструкции
+    } // внутри фигурных скобок находится тело функции
+    sum(1, 2) // вызов функции с определёнными аргументами 1 и 2.
+    document.write("3+4=", sum(3, 4), "<br/>")
+
+    // ФУНКЦИя может быть:
+    //- именованной
+    //- присвоена переменной
+    //- анонимной
+    //- аргументом при вызове другой функции
+    //- значением свойства (метода) объекта
+
+    // Выражения, ФУНКЦИи, Объекты - три ключевых понятия в JS
+    // Функция - Это объект
+
+    // просто по приколу сама короткая функция
+    function f() {
+    }
+
+    f()
+
+
+    // передача значения по ссылке
+    const cat = {
+        age: 0,
+        color: "black"
+    }
+    document.write("cat", JSON.stringify(cat), "<br/>")
+
+    function changeCatColor(cat) {
+        cat.color = "red"
+        return cat
+    }
+
+    changeCatColor(cat)
+    console.log(cat.color)
+    document.write("cat", JSON.stringify(cat), "<br/>")
+    // внутри функции не рекомендуется мутировать внешние объекты !!!
+
+
+    // далее пример: создадим новый объект как копию старого и сразу поменяем его через функцию
+    function changeCatAge(cat) {
+        const newCat = Object.assign({}, cat)
+        newCat.age = 99
+        return newCat
+    }
+
+    const oldCat = changeCatAge(cat)
+    console.log(cat.age)
+    console.log(oldCat.age)
+    document.write("cat", JSON.stringify(cat), "<br/>")
+    document.write("oldCat", JSON.stringify(oldCat), "<br/>")
+
+
+    // слово function можно не писать
+    myHome1 = {
+        material: "wood",
+        adress() {
+            console.log("Novosibirsk, Mira Village")
+        },
+        isGood: true
+    }
+    myHome1.adress() // вызов метода adress объекта myHome1
+    document.write("<br/>", JSON.stringify(myHome1), "<br/>")
+
+
+    // -------------КОЛБЭК ФУНКЦИИ---------------------
+    document.write("<br/>", "<h3>", "КОЛБЭК ФУНКЦИИ", "</h3>")
+
+    function printMyName() { // это колбэкфункци, она передаётся как аргумент в другую функцию
+        console.log("my name is Maksim")
+        document.write("my name is Maksim", "<br>")
+    }
+
+    function functionWithCallBack(callbackFunction) {
+        callbackFunction()
+    }
+
+    functionWithCallBack(printMyName)
+    //setTimeout(printMyName,2000) // Эта функция будет вызвана через 2000 мс функцию printMyName
+
+    // Функции надо называть в соответствии с задачей
+    // Одна функция для одной задачи
+    // Функция должна быть чистой, т.е. не менять внешние переменные
+
+
+    // -------------ОБЛАСТИ ВИДИМОСТИ ---------------------
+    document.write("<br/>", "<h3>", "ОБЛАСТИ ВИДИМОСТИ", "</h3>")
+    // Область видимости определяет границы использования переменной
+    // В глобальной области могу быть переменные а, b, c/
+    // В локальной могут быть переменные с такими же именами а, b, c, но это будут РАЗНЫЕ переменные.
+    // Из локальной области можно обратится к глобальным переменным, если в локальной нет одноимённых переменных
+    // Но если одноимённая переменная есть в локальной области, то будет использоваться именно она.
+    // Пример
+
+    let x //переменная в глобальной области видимости
+    x = 123
+    let y //переменная в глобальной области видимости
+
+    console.log("global and local variable")
+
+    function changeVar() { // при создании функции создаётся локальная область видимости функции
+        let x // локальная переменная
+        x = 10
+        y = true // так лучше не делать вообще
+        console.log(x)
+    }
+
+    changeVar()
+    console.log(x)
+    document.write("x=", JSON.stringify(x), "<br/>")
+    console.log(y)
+    document.write("y=", JSON.stringify(y), "<br/>")
+
+    const z = 123
+
+    function fz() {
+        function innerFz() {
+            console.log(z)
+            document.write("z=", JSON.stringify(z), "<br>")
+        }
+
+        innerFz()
+    }
+
+    fz()
+    // пример с так называемой цепочкой областей видимости
+    // z нет в innerFz
+    // z нет в fz
+    // z нашлась только в глобальной области видимости
+
+
+    // --------------Жизненный цикл переменной----------------
+    document.write("<br/>", "<h3>", "Жизненный цикл переменной", "</h3>")
+    // после выполнения функции все её переменные уничтожаются
+    // переменная сперва ищется в локальной области, потом в глобальной.
+
+    function fuckFn() {
+        let v;
+        v = 1;
+        console.log(v)
+        document.write("v=", JSON.stringify(v), "<br>")
+    }
+
+    fuckFn()
+    // -------------------Типы областей видимости -----------
+    // блок - любой код внутри {}
+    // переменные внутри блока доступна только в нём.
+
+
+    document.write("<br/>", "<h3>", "Правила работы  переменными", "</h3>")
+</script>
+<ol>
+    <!--устанавливает нумерованный список.-->
+    <li>Сперва объявлять</li>
+    <li>Стараться использовать const</li>
+    <li>Внутри функции не менять внешние переменные</li>
+    <li>Использовать строгий режим 'use strict' в самом начале программы</li>
+</ol>
+<br>
+<br>
+<h3> ОПЕРАТОРЫ</h3>
+<pre>
+  Оператор- это по сути внутрення функция
+  Арифметические +, -, *, /
+  Сравнения ===, !==, <=, >=
+  логические, !-не, &&-и, || - или
+  присваивание =
+  ТЕКСТОВЫЕ операторы
+  new
+  delete - удалить
+  typeof
+  instanceof
+</pre>
+<script>
+    let q, w // запятая это тоже оператор
+    q = 1
+    w = 2
+    let r
+    r = 2 //  оператор присваивания, левый операнд r, правый оператор 1
+
+    // деструктивное присваивание
+    let [a1, b1, d1] = [1, 2, 3];
+    d1 = d1 + a1 + b1
+
+    // -------------------- унарные операторы-----------------------------
+    // Это операторы у которых один операнд (аргумент)
+    let u = "123"
+    console.log("variable u is ", typeof u) // typeof возвращает тип переменной
+    document.write("varible u is " + typeof u + "<br>")
+    u++; // увеличиваем значение y на 1
+    console.log("u=", u)
+    document.write("variable u is ", typeof u, "<br>")
+    document.write("u= " + u + "<br>" + "<br>")
+</script>
+<h3> Бинарные операторы</h3>
+<pre>
+  ===  равно
+  && логическое И
+  || логическое ИЛИ
+  a+=5 прибавить 5 к переменной a и сразу присвоить ей это значение
+
+</pre>
+<h3>Инфиксная запись</h3>
+<pre>
+  оператор между операндами
+  a + b например
+
+</pre>
+<h3>Префиксная запись</h3>
+<pre>
+  сперва оператор потом операнд
+  typeof a   например
+
+</pre>
+<h3>Постфиксная запись</h3>
+<pre>
+  оператор после операнд
+  a++   например
+  my_fn () тоже Постфиксная запись
+</pre>
+<h3>Приоритетность операторов</h3>
+<pre>
+  гуглится по табличке в интернете'
+</pre>
+<h3> Логические операторы</h3>
+<pre>
+  ! унарные, префиксный
+  &&, логическое И  бинарный
+  || логическое ИЛИ  бинарный
+</pre>
+<script>
+    let v1 = 0
+    console.log("0 это ", Boolean(v1)) //Boolean это функция приведения к логическому типу
+    document.write("0 это " + Boolean(v1) + "<br>")
+
+    v1 = 1
+    console.log("1 это ", Boolean(v1))
+    document.write("1 это " + Boolean(v1) + "<br>")
+
+    v1 = ""
+    console.log("пустая строка это ", Boolean(v1))
+    document.write("Пустая строка это " + Boolean(v1) + "<br>")
+
+    v1 = "string"
+    console.log("непустая строка это ", Boolean(v1))
+    document.write("НЕпустая строка это " + Boolean(v1) + "<br>")
+
+    v1 = undefined
+    console.log("undefined это ", Boolean(v1))
+    document.write("undefined это " + Boolean(v1) + "<br>")
+
+    v1 = null
+    console.log("null это ", Boolean(v1))
+    document.write("null это " + Boolean(v1) + "<br>" + "<br>" + "<br>")
+
+
+    // --------------- Оператор typeof ---------------
+    document.write("<br>", "<h3>", "Оператор typeof", "</h3>")
+    // унарный, префиксный 
+    console.log("typeof true ", typeof true)
+    document.write("typeof true ", typeof true, "<br>")
+
+    console.log("typeof 123", typeof 123)
+    document.write("typeof 123 ", typeof 123, "<br>")
+
+    console.log("typeof string", typeof "string")
+    document.write("typeof string ", typeof "string", "<br>")
+
+    console.log("typeof undefined", typeof undefined)
+    document.write("typeof undefined ", typeof undefined, "<br>")
+
+    console.log("typeof null", typeof null)
+    document.write("typeof null ", typeof null, "<br>")
+
+    console.log("typeof 10 is number", typeof 10 === "number")
+    document.write("typeof 10 is number? " + (typeof 10 === "number") + "<br>")
+    document.write("<br>")
+    // проверяем тип переменной
+
+
+    // --------------- Оператор отрицания ---------------
+    // префиксный унарный
+    document.write("<br>", "<h3>", "Оператор отрицания", "</h3>")
+
+    console.log("!10 =", !10)
+    document.write("!10 =" + (!10).toString() + "<br>")
+
+    console.log("!0 =", !0)
+    document.write("!0 =", (!0).toString(), "<br>")
+
+    console.log("!abc", !"abc")
+    document.write("!abc =", (!"abc").toString(), "<br>")
+
+    console.log("!пустая строка", !"")
+    document.write("!пустая строка =", (!"").toString(), "<br>")
+
+    console.log("!!10 =", !!10) // по сути конвертируем в boolean
+    document.write("!!10 =", (!!10).toString(), "<br>")
+
+    let emptyObject = {}
+    console.log(emptyObject)
+    console.log("!пустой объект ", !emptyObject)
+    document.write("!пустой объект =" + (!emptyObject).toString() + "<br>")
+
+    // ----------------------ОператорЫ &&-И ||-или -----------------------------------------------------------
+    // Почему-то называются операторами короткого замыкания
+    document.write("<br>", "<h3>", "ОператорЫ &&-И ||-или", "</h3>")
+    // выражение1 && выражение2
+
+    // если выражение1 ложно, то выражение 2 игнорируется и возвращается результат выражения 1
+    document.write("<b>", "выражение1 && выражение2", "</b>", "<br>")
+    document.write("Если выражение1 ложно , то выражение 2 игнорируется и возвращается результат выражения 1", "<br>")
+
+    // если выражение1 истинно, то оценивается выражение2
+    // если при этом выражение2 ложно, то оно и возвращается
+    document.write("если выражение1 истинно , то оценивается выражение2 ", "<br>")
+    document.write("если при этом выражение2 ложно, то оно и возвращается", "<br>")
+
+    console.log("1 && 0 =", 1 && 0)
+    document.write("1 && 0 =", (1 && 0).toString(), "<br>")
+
+    console.log("abc && undefined =", "abc" && undefined)
+    document.write("abc && undefined =", "abc" && undefined, "<br>")
+    // если же выражение2 истинно, то всё равно возвращается именно выражение2
+    document.write("Если же  выражение2 истинно, то всё равно возвращается именно выражение2", "<br>")
+    console.log("abc && 1 =", "abc" && 1)
+    document.write("abc && 1 =", ("abc" && 1).toString(), "<br>", "<br>")
+    // Я пока не врубился почему так.
+
+
+    // выражение1 || выражение2
+    document.write("<b>", "выражение1  ||  выражение2", "</b>", "<br>")
+    // если выражение1 истинно, то выражение 2 игнорируется и возвращается результат выражения 1
+    document.write("если выражение1 истинно , то выражение 2 игнорируется и возвращается результат выражения 1", "<br>")
+
+    console.log("1 || 123 =", 1 || 123)
+    document.write("1 || 123 =", (1 || 123).toString(), "<br>")
+
+    // если выражение1 ложно, то возвращается результат выражения 2
+    document.write("если выражение1 ложно , то возвращается результат выражения 2", "<br>")
+    console.log("0 || 123 =", 0 || 123)
+    document.write("0 || 123 =", (0 || 123).toString(), "<br>")
+
+    console.log("0 || undefined =", 0 || undefined)
+    document.write("0 || undefined =", 0 || undefined, "<br>")
+
+    let n // переменная n не получила значения
+    n = n || "default value" // если нет значения, то присваиваем значение по умолчанию
+    console.log("n=", n)
+    document.write("n=", n, "<br>")
+
+    // a && b && c && d - вернёт первое ложное значение, если первые три выражения истинны, то вернёт четвёртое
+    // a || b || c || d - вернёт первое правдивое значение, если первые три выражения ложны, то вернёт четвёртое
+    console.log("1 && 2 && 3 && 0 = ", 1 && 2 && 3 && 0) // => 0
+    document.write("1 && 2 && 3 && 0 = ", (1 && 2 && 3 && 0).toString(), "  вернулось первое ложное значение, если первые три выражения истинны, то вернёт четвёртое", "<br>")
+
+    console.log("1 || 2 || 3 || 0 = ", 1 || 2 || 3 || 0) // => 1
+    document.write("1 || 2 || 3 || 0 = ", (1 || 2 || 3 || 0).toString(), "  вернёт первое правдивое значение, если первые три выражения ложны, то вернёт четвёртое", "<br>")
+
+
+    // ---------------- ОПЕРАТОР три точки - РАЗДЕЛЕНИе ОБЪЕКТА НА СВОЙСТВА ------------------
+    document.write("<br>", "<h3>", "ОПЕРАТОР три точки - РАЗДЕЛЕНИе ОБЪЕКТА НА СВОЙСТВА", "</h3>")
+    const button = {
+        text: "but",
+        width: 10
+    }
+    document.write("button ", JSON.stringify(button), "<br>")
+
+    const greenButton = {
+        ...button,
+        color: "green" // если свойство уже есть, то оно перезапишется, поскольку мы добавили свойство после разделения объекта
+    }
+    console.log(greenButton)
+    document.write("greenButton ", JSON.stringify(greenButton), "<br>")
+
+
+    const buttonInfo = {
+        text: "but",
+    }
+    document.write("buttonInfo ", JSON.stringify(buttonInfo), "<br>")
+
+    const buttonStyle = {
+        color: "green"
+    }
+    document.write("buttonStyle ", JSON.stringify(buttonStyle), "<br>")
+
+    const newButton = { // в новом объекте объединяем свойство двух старых
+        ...buttonInfo,
+        ...buttonStyle
+    }
+    console.table(newButton)
+    document.write("newButton ", JSON.stringify(buttonStyle), "<br>")
+
+
+    // ---------------- КОНКАТЕНАЦИЯ СТРОК ----------------------
+    document.write("<br>", "<h3>", "КОНКАТЕНАЦИЯ СТРОК", "</h3>")
+    console.log("hello" + " " + "World")
+    const he = "hello"
+    const wo = "World"
+    console.log(he + " " + wo)
+    document.write(he + " " + wo, "<br>")
+
+    console.log(`${he} ${wo}`) // шаблонные строки
+    document.write(`${he} ${wo}`, "<br>")
+
+    const my_name = "Максим"
+    const my_age = 34
+    console.log(`меня зовут ${my_name} мне ${my_age} лет`)
+    document.write(`меня зовут ${my_name} мне ${my_age} года`, "<br>")
+
+    console.log(undefined + "abc") //автоматическая конкатенация строк
+    document.write("автоматическая конкатенация строк ", "<b>", undefined + "abc", "</b>", "<br>", "<br>")
+
+
+    // ---------------- ФУНКИОНАЛЬНЫЕ ВЫРАЖЕНИЯ ----------------------------------------------
+    document.write("<br>", "<h3>", "ФУНКИОНАЛЬНЫЕ ВЫРАЖЕНИЯ", "</h3>")
+    document.write("<ul>", "<li>", "не имеет имени;", "</li>")
+    document.write("<li>", "не используется автономно.", "</li>", "</ul>")
+    let multiplication = function (a, b) {  // переменной multiplication присваиваем анонимное функциональное выражение
+        return a * b
+    }
+    multiplication(1, 2)
+    document.write("1*2=", multiplication(1, 2), "<br>")
+
+
+    // ---------------- Стрелочные ВЫРАЖЕНИЯ --------------------------------------------
+    // это выражение
+    document.write("<br>", "<h3>", "Стрелочные ВЫРАЖЕНИЯ", "</h3>")
+    const f2 = (a, b) => {
+        let c
+        c = a - b
+        return c
+    }
+    f2(2, 1)
+    // при таком подходе f2 уже не может быть переопределено
+    setTimeout(() => {
+        console.log("стрелочная функция")
+    }, 1000)
+    let sum3 = (a, b, c) => a + b + c // неявно возвращает результат выражения,
+    // фигурные скобки можно не ставить если только одно выражение 
+    document.write("2+3+4=", sum3(2, 3, 4), "<br>", "<br>")
+
+
+    // ---------------- ЗНАЧЕНИЯ ПАРАМЕТРОВ ФУНКЦИИ ПО УМОЛЧАНИЮ ----------------------
+    document.write("<br>", "<h3>", "ЗНАЧЕНИЯ ПАРАМЕТРОВ ФУНКЦИИ ПО УМОЛЧАНИЮ", "</h3>")
+
+    function multiplication3(a = 1, b = 1, c = 1) {
+        let d
+        d = a * b * c
+        return d
+    }
+
+    console.log("1*2*3=", multiplication3(1, 2, 3))
+    document.write("1*2*3=", multiplication3(1, 2, 3), "<br>")
+
+    console.log("1*1*1", multiplication())
+    document.write("1*1*1=", multiplication3(), "<br>")
+
+    console.log(Date())
+    document.write("Date ", Date(), "<br>")
+
+    // сложный пример
+    const newPost = (post, addedAt = Date()) => ({
+        ...post,
+        addedAt,
+    })
+    // newPost - это переменна
+    // ей присваивается стрелочная функция
+    // задача функции добавить к объекту post новое свойство addedAt (дату создания)
+    // Date() - функция , которая возвращает текущую дату
+    // после стрелки идут () это потому что функция должна вернуть неявно объект, трудно уже для понимания
+    // 
+    const firstPost = {
+        id: 1,
+        author: "Pushkin",
+    }
+
+    newPost(firstPost) // в момент вызовы функции формируется текущая дата
+
+    console.table(newPost(firstPost))
+    document.write("newPost ", JSON.stringify(newPost(firstPost)), "<br>")
+
+    // В примере ниже функция возвращает объект уже явно. Так проще мне для понимания
+    const newPost1 = (post, addedAt = Date()) => {
+        return {
+            ...post,
+            addedAt,
+        }
+    }
+    console.table(newPost1(firstPost))
+    document.write("newPost ", JSON.stringify(newPost1(firstPost)), "<br>")
+
+
+    // ------------ОБРАБОТКА ОШИБОК --------------------------------------------------------------------
+    document.write("<br>", "<h3>", "ОБРАБОТКА ОШИБОК", "</h3>")
+    // не ошибается тот, кто ничего не делает
+    // ошибка приводит к прекращению выполнения кода
+    const fnWithError = () => {
+        throw new Error("Етить колотить всё поломалось на фиг" + "<br>") // выбросить новую ошибку дословно
+        // Это непойманная ошибка, код после неё не будет дальше выполняться
+    }
+    //fnWithError() // вызываем функцию которая генерит непойманную ошибку
+    //console.log("продолжаем...")
+
+    try { // дословно попробовать
+        // тут код который пробуем выполнить
+        fnWithError()
+    } catch (error) {
+        // тут код который надо выполнить если произошла ошибка в блоке try
+        console.error(error, "Что то пошло не так")
+        document.write(error, "<br>", " Что то пошло не так", "<br>")
+    }
+    console.log("продолжаем...")
+    document.write("продолжаем", "<br>")
+
+    // ------------ИНСТРУКЦИИ-----------------------------
+    document.write("<br>", "<h3>", "ИНСТРУКЦИИ", "</h3>")
+    document.write("Выражение всегда возвращает значение, например присваивание значения переменной - это выражение, оно вернёт undefined", "<br>")
+    document.write("Инструкция не возвращает значения,  но выполняет действие, например объявление переменной - ", "<b>", "let variable", "</b>", "<br>")
+    // Выражение-Инструкция
+    // Инструкция-Выражение - не существует
+
+    let aa = 1; // Инструкция, каждую следует отделять точкой с запятой
+    const bb = 0; // Инструкция,
+    if (aa > bb) {
+        console.log("aa is larger")
+        document.write("aa is larger", "<br>")
+    } // Инструкция, после фигурной скобки не надо точку с запятой ставить.
+    for (let i = 0; i++; i < 5) { // Инструкция,
+        console.log(i);
+        document.write(i + "<br>")
+    }
+    // точку с запятой можно опускать
+
+    // Выражение может быть Инструкцией, стоит только поставить точку с запятой
+    aa = aa + 1;//  выражение-инструкция, оно вернёт значение
+    function myFunction() {
+    }
+
+    myFunction(); //  выражение-инструкция,
+
+    // инструкция не может стать выражением
+    // выражение может быть использовано как аргумент в функции
+    // инструкция НЕ может быть использована как аргумент в функции
+    // myFn(let a) // не сработает, выдаст ошибку
+
+
+    // ------------МАССИВЫ-----------------------------
+    document.write("<br>", "<h3>", "МАССИВЫ", "</h3>")
+    document.write("массив это объект с цифровыми именами свойств", "<br>")
+
+    const myArray = [1, 2, 3, 4] // создали массив myArray - Это ссылка на объект !!!
+    document.write("<b>" + myArray + "</b>" + ", длинна массива " + myArray.length + "<br>")
+
+
+    const myArray2 = [1, 2.34, "a", true] // создали новый экземпляр класса Array
+    document.write("Ещё массив " + "<b>" + myArray2 + "</b>" + "<br>")
+    document.write("нулевой элемент массива имеет значение ", "<b>", myArray2[0], "</b>", "<br>")
+    document.write("порядок элементов в массиве важен ! ", "<br>")
+    myArray2[1] = 123
+    document.write("меняем элемент с индексом 1, теперь его значение ", "<b>", myArray2[1], "</b>", "<br>")
+
+    myArray2.push("newElement")
+    document.write("Добавляем новый элемент массива " + "<b>" + myArray2 + "</b>" + "<br>")
+
+    myArray2.pop() // удаляем последний элемент массива
+    document.write("Удаляем последний элемент массива " + "<b>" + myArray2 + "</b>" + "<br>")
+
+    const removeElement = myArray2.pop() // удаляем последний элемент массива, сохраняя его значение в переменную. 
+    document.write("Удаляем последний элемент массива " + "<b>" + myArray2 + "</b>" + "его значение было " + "<b>" + removeElement + "</b>" + "<br>")
+
+    myArray2.unshift("НовыйНулевойЭлемент ")
+    document.write("Добавляем новый элемент массива в начало " + "<b>" + myArray2 + "</b>" + "<br>")
+
+    myArray2.shift()
+    document.write("Удаляем нулевой элемент массива " + "<b>" + myArray2 + "</b>" + "<br>")
+
+    document.write("Перебираем массив ")
+    myArray2.forEach(el => document.write("<b>", el, "</b>", " "))
+    document.write("<br>")
+    // не очень понятным мне способом перебираем весь массив
+    // forEach возвращает undefined
+
+    document.write("Перебираем массив ещё раз ")
+    myArray2.map(el => document.write("<b>", el, "</b>", " "))
+    // не очень понятным мне способом перебираем весь массив
+    // map возвращает новый массив
+    document.write("<br>")
+
+    const myArray3 = myArray2.map(function (el) {
+        return el + 1
+    })
+    document.write("Создаём новый массив перебором старого и добавлением единицы: " + "<b>" + myArray3 + "</b>" + "<br>")
+
+
+    // --------------ДЕСТРУКТУРИЗАЦИЯ----------------------------------
+
+    // --------------ДЕСТРУКТУРИЗАЦИЯ объекта-------------------------
+    document.write("<br>", "<h3>", "деструктуризация", "</h3>")
+    const userProfile = {
+        name: "Ivan",
+        country: "Russia"
+    }
+    const {name, country} = userProfile  // объявление переменной и присваивание ей значения на основе значения одноимённого свойства объекта
+    document.write("name=", "<b>", name, "</b>", "<br>")
+    document.write("country=", "<b>", country, "</b>", "<br>")
+
+    // --------------ДЕСТРУКТУРИЗАЦИЯ массива-------------------------
+    const PLC = ["ПР200", "Pixel", "SMH4"] // порядок важен !!! 
+    const [plc1, plc2, plc3] = PLC  // объявление переменный и присваивание им значений на основе значений массива
+    document.write("Контроллеры ", "<b>", plc1, ", ", plc2, ", ", plc3, "</b>", "<br>")
+
+    // --------------ДЕСТРУКТУРИЗАЦИЯ функции-------------------------
+    const PLC2 = {
+        manufacturer: "Segnetics",
+        model: "Pixel",
+        ethernet: "optional"
+    }
+
+    const PLC2info = ({manufacturer, model, ethernet}) => {
+        document.write("<br>",
+            "Производитель: ", "<b>", manufacturer, "</b>", "<br>",
+            "Модель: ", "<b>", model, "</b>", "<br>",
+            "Ethernet: ", "<b>", ethernet, "</b>", "<br>",
+            "<br>")
+    }
+
+    PLC2info(PLC2);
+
+
+    // --------------УСЛОВНЫЕ ИНСТРУКЦИИ -------------------------
+
+    // if
+    document.write("<br>", "<h3>", "УСЛОВНЫЕ ИНСТРУКЦИИ", "</h3>")
+    document.write("<br>", "if - условный  оператор ", "<br>")
+    if (1 < 0) {
+        // условие ложно, код не выполнится
+    }
+
+    if (PLC2.manufacturer) {
+        document.write("У контроллера есть производитель", "<br>")
+    }
+
+    if (!PLC2.contry) {
+        document.write("Но в какой стране собран не известно", "<br>")
+    }
+
+    // if, else
+    if (PLC2.model) {
+        document.write("Модель контроллера определена", "<br>")
+    } else {
+        document.write("Хрен знает что за контроллер", "<br>")
+    }
+
+    // if, else if, else
+    if (PLC2.ethernet === "optional") {
+        document.write("интерфейс ethernet опционален", "<br>")
+    } else if (PLC2.ethernet === "1") {
+        document.write("интерфейс ethernet встроенный", "<br>")
+    } else {
+        document.write("интерфейс ethernet не встроенный и не опциональный", "<br>")
+    }
+
+
+    // Использование if в функциях
+    document.write("<br>", "<b>", "Использование if в функциях", "</b>", "<br>")
+    const sumPositiveNumber = (a, b) => {
+        if (typeof a !== "number" || typeof b !== "number") {
+            return "один из аргументов не число"
+        }
+        if (a <= 0 || b <= 0) {
+            return "одно из чисел не позитивно"
+        }
+
+        return a + b
+    }
+
+    document.write(sumPositiveNumber("a", true), "<br>")
+    document.write(sumPositiveNumber(0, -1), "<br>")
+    document.write("1+2=", sumPositiveNumber(1, 2), "<br>")
+
+    const month = 2
+    switch (month) {
+        case 12:
+            document.write("Декабрь", "<br>")
+            break
+
+        case 1:
+            document.write("Январь", "<br>")
+            break
+
+        case 2:
+            document.write("Февраль", "<br>")
+            break
+        default:
+            document.write("не зимний месяц", "<br>")
+    }
+    // Тернарный оператор, возвращает значение, имеет 3 операнда.
+    // Условие ? Выражение 1 : Выражение 2
+    // Выражение 1 возвращается если Условие правдиво
+    // Выражение 2 возвращается если Условие ложно
+    document.write("<br>", "<h3>", "ТЕРНАРНЫЙ ОПЕРАТОР", "</h3>")
+    // Лучше писать на 3-х строках
+    // Условие 
+    // ? Выражение 1
+    // : Выражение 2
+
+    const value1 = 1
+    value1
+        ? document.write("Условие верно", "<br>")
+        : document.write("Условие ложно", "<br>")
+
+    const value2 = -2
+    document.write("Модуль числа " + value2 + "равен " + (value2 >= 0 ? value2 : -value2) + "<br>")
+
+    const value3 = value2 >= 0 ? value2 : -value2
+    document.write("Модуль числа ${value2} равен ${value3}<br>")
+
+    // ЦИКЛЫ
+    document.write("<br>", "<h3>", "ЦИКЛЫ", "</h3>")
+    // ЦИКЛ for 
+    // цикл это инструкция
+    document.write("<b>", "for ", "</b>")
+    for (let i = 0; i < 5; i++) {
+        document.write(i.toString(), " ")
+    }
+    document.write("<br>")
+
+    const myArray4 = ['1a', '2b', '3c', '4d', '5e']
+    for (let i = 0; i < myArray4.length; i++) {
+        document.write(myArray4[i], " ")
+    }
+    document.write("<br>")
+
+
+    myArray4.forEach((element, index) => {
+        document.write(element, index.toString(), "   ")
+    })
+    document.write("<br>")
+
+    // ЦИКЛ While
+    let i = 0
+    document.write("<b>", "while ", "</b>")
+    while (i < 5) { // может быть ни разу не выполнен
+        document.write(i, " ")
+        i++;
+    }
+    document.write("______может быть ни разу не выполнен", "<br>")
+
+    // ЦИКЛ Do While
+    i = 0
+    document.write("<b>", "do while ", "</b>")
+    do { // выполнится хотя бы один раз
+        document.write(i, " ")
+        i++;
+    } while (i < 1)
+    document.write("______выполнится хотя бы один раз", "<br>")
+
+
+    // ЦИКЛ for in
+    document.write("<b>", "ЦИКЛ for..in____", "</b>  ")
+    let object3 = {
+        prop1: true,
+        prop2: 10,
+        prop3: "abc"
+    }
+    for (const key in object3) {
+        document.write(key, " = ", object3[key], ",   ")
+    }
+    document.write("______позволяет легко перебрать свойства объекта ", "<br>")
+
+    document.write("<b>", "forEach+Object.keys ", "</b>  ")
+    Object.keys(object3).forEach(key => {
+        document.write(key, " = ", object3[key], ",   ")
+    })
+    document.write("<br>")
+
+    document.write("<b>", "forEach+Object.values ", "</b>  ")
+    Object.values(object3).forEach(value => {
+        document.write(value.toString(), ",   ")
+    })
+    document.write(" ", "<br>")
+
+
+    // For in для массивов
+    document.write("<b>", " for in для массивов  ", "</b>  ")
+    for (const key in myArray4) {
+        document.write(key, " ")
+    }
+    document.write("______но лучше так не делать , лучше for each использовать для переборки массива", "<br>")
+
+
+    // For of для массивов
+    // for (element of iterable)? element-это элемент, iterable - это что угодно что можно перебирать(итерировать)
+    // объект - хрен итерируешь
+    const myName = 'Maksim'
+    document.write("<b>", " Цикл for of  для строки ", "</b>  ")
+    for (const letter of myName) {
+        document.write(letter, " ")
+    }
+    document.write(" ", "<br>")
+
+    document.write("<b>", " Цикл for of  для массива ", "</b>  ")
+    for (const element of myArray3) {
+        document.write(element.toString(), " ")
+    }
+    document.write(" ", "<br>")
+
+    document.write("<b>", " Цикл for of  для объектов не работает, объект - это не итерируемый тип ", "</b>", "<br>")
+
+</script>
+<input type="button" onclick="clean()" value="всё на хрен стереть безвозвратно навсегда!">
+<script>
+    function clean() {
+        document.write(" всё на хрен стёрто ", "<br>")
+    }
+
+</script>
+
