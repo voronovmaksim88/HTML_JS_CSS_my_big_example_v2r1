@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!-- Элемент <!DOCTYPE> предназначен для указания типа текущего документа, html означает что тип HTML5 -->
-<html lang="en" dir="ltr">
-<!-- язык английский, определяет направление и отображение текста — слева направо  -->
-
+<html lang="en">
 <head>
     <meta charset="utf-8"> <!-- кодировка текста -->
     <script src="script.js"></script> <!-- подключаем скрипт -->
@@ -83,7 +80,6 @@
     <link rel="stylesheet" href="highlight/styles/atom-one-dark.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
 </head>
-
 <body>
 <h1 style="margin-top: 0.2em">JavaScript</h1>
 <div class="flex-container">
@@ -652,7 +648,7 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
 
     // --------------- Оператор typeof ---------------
     document.write("<br>", "<h3>", "Оператор typeof", "</h3>")
-    // унарный, префиксный 
+    // унарный, префиксный
     console.log("typeof true ", typeof true)
     document.write("typeof true ", typeof true, "<br>")
 
@@ -833,7 +829,7 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
         console.log("стрелочная функция")
     }, 1000)
     let sum3 = (a, b, c) => a + b + c // неявно возвращает результат выражения,
-    // фигурные скобки можно не ставить если только одно выражение 
+    // фигурные скобки можно не ставить если только одно выражение
     document.write("2+3+4=", sum3(2, 3, 4), "<br>", "<br>")
 
 
@@ -865,7 +861,7 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
     // задача функции добавить к объекту post новое свойство addedAt (дату создания)
     // Date() - функция , которая возвращает текущую дату
     // после стрелки идут () это потому что функция должна вернуть неявно объект, трудно уже для понимания
-    // 
+    //
     const firstPost = {
         id: 1,
         author: "Pushkin",
@@ -962,7 +958,7 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
     myArray2.pop() // удаляем последний элемент массива
     document.write("Удаляем последний элемент массива " + "<b>" + myArray2 + "</b>" + "<br>")
 
-    const removeElement = myArray2.pop() // удаляем последний элемент массива, сохраняя его значение в переменную. 
+    const removeElement = myArray2.pop() // удаляем последний элемент массива, сохраняя его значение в переменную.
     document.write("Удаляем последний элемент массива " + "<b>" + myArray2 + "</b>" + "его значение было " + "<b>" + removeElement + "</b>" + "<br>")
 
     myArray2.unshift("НовыйНулевойЭлемент ")
@@ -1002,7 +998,7 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
     document.write("country=", "<b>", country, "</b>", "<br>")
 
     // --------------ДЕСТРУКТУРИЗАЦИЯ массива-------------------------
-    const PLC = ["ПР200", "Pixel", "SMH4"] // порядок важен !!! 
+    const PLC = ["ПР200", "Pixel", "SMH4"] // порядок важен !!!
     const [plc1, plc2, plc3] = PLC  // объявление переменный и присваивание им значений на основе значений массива
     document.write("Контроллеры ", "<b>", plc1, ", ", plc2, ", ", plc3, "</b>", "<br>")
 
@@ -1037,7 +1033,7 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
         document.write("У контроллера есть производитель", "<br>")
     }
 
-    if (!PLC2.contry) {
+    if (!PLC2.country) {
         document.write("Но в какой стране собран не известно", "<br>")
     }
 
@@ -1097,7 +1093,7 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
     // Выражение 2 возвращается если Условие ложно
     document.write("<br>", "<h3>", "ТЕРНАРНЫЙ ОПЕРАТОР", "</h3>")
     // Лучше писать на 3-х строках
-    // Условие 
+    // Условие
     // ? Выражение 1
     // : Выражение 2
 
@@ -1114,7 +1110,7 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
 
     // ЦИКЛЫ
     document.write("<br>", "<h3>", "ЦИКЛЫ", "</h3>")
-    // ЦИКЛ for 
+    // ЦИКЛ for
     // цикл это инструкция
     document.write("<b>", "for ", "</b>")
     for (let i = 0; i < 5; i++) {
@@ -1212,4 +1208,3 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
     }
 
 </script>
-
