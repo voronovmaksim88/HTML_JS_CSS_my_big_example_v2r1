@@ -1,0 +1,222 @@
+<!--  ctrl + / закомментировать или раскомментировать -->
+<!-- Это сайт внутри которого я хочу разместить всякие примеры для себя того что я изучил по html, css, js -->
+
+<!DOCTYPE html>
+<!-- Элемент <!DOCTYPE> предназначен для указания типа текущего документа, html означает что тип HTML5 -->
+<html lang="en" dir="ltr">
+<!-- язык английский, определяет направление и отображение текста — слева направо  -->
+
+<head>
+    <!-- Тег <head> предназначен для хранения других элементов, цель которых — помочь браузеру в работе с данными.
+     Также внутри контейнера <head> находятся метатеги, которые используются для хранения информации предназначенной для браузеров и поисковых систем.
+     Например, механизмы поисковых систем обращаются к метатегам для получения описания сайта, ключевых слов и других данных -->
+    <meta charset="utf-8"> <!-- кодировка текста -->
+    <title>Test CSS </title> <!-- прописываем заголовок -->
+    <!--Определяет заголовок документа. Элемент <title> не является частью документа и не показывается напрямую на веб-странице.
+      В операционной системе Windows текст заголовка отображается в левом верхнем углу окна браузера.
+      Допускается использовать только один тег <title> на документ и размещать его в контейнере <head>.  -->
+
+    <!-- подключаем нормализацию стилей -->
+    <link rel="stylesheet" href="normalise.css">
+
+    <style>
+        body{
+            font-family: Calibri, sans-serif;
+        }
+
+        .flex-container {
+            display: flex;
+            /* Использует flexbox для контейнера */
+            /* Дополнительные стили для наглядности */
+            border: 2px solid black;
+            margin-inline: 1rem;
+            margin-bottom: 2rem;
+            background-color: #3eaf7c;
+
+            /**
+             по умолччанию
+            flex-direction: row;
+             */
+        }
+
+        .inline-flex-container {
+            display: inline-flex;
+        }
+
+        .flex-row-revers {
+            flex-direction: row-reverse;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .flex-element {
+            /* Дополнительные стили для наглядности */
+            border: 2px solid #146418;
+            box-sizing: border-box;
+            margin: 0.5rem;
+            padding: 0.5rem;
+            background-color: lightgray;
+        }
+
+        .flex-element-100 {
+            width: 100px;
+        }
+
+        .flex-element-200 {
+            width: 200px;
+        }
+
+        .flex-grow-1 {
+            flex-grow: 1;
+        }
+
+        .flex-grow-2 {
+            flex-grow: 2;
+        }
+
+        .flex-shrink-2{
+            flex-shrink: 2;
+        }
+
+        .flex-shrink-0{
+            flex-shrink: 0;
+        }
+
+            h1 {
+        color: red;
+    }
+
+
+    </style>
+
+
+</head>
+
+<body>
+<!-- это собственно тело страницы -->
+
+<h1>CSS</h1>
+<h2>Flex</h2>
+<div>display: flex;</div>
+<div class="flex-container">
+    <div class="flex-element">
+        flex-div
+    </div>
+    <div class="flex-element">
+        размеры растягиваются по горизонтали во всю ширину страницы
+    </div>
+</div>
+
+
+<div>display: flex + inline-flex;</div>
+<div class="flex-container inline-flex-container ">
+    <div class="flex-element">
+        flex-div
+    </div>
+    <div class="flex-element">
+        размеры ограничены содержимым
+    </div>
+</div>
+<div class="flex-container inline-flex-container ">
+    <div class="flex-element">
+        flex-div
+    </div>
+    <div class="flex-element">
+        размеры ограничены содержимым
+    </div>
+</div>
+
+
+<div>display: flex + flex-direction: row-reverse</div>
+<div class="flex-container flex-row-revers">
+    <div class="flex-element">
+        flex-element
+    </div>
+    <div class="flex-element">
+        flex-element
+    </div>
+</div>
+
+
+<div>display: flex + flex-direction: column</div>
+<div class="flex-container flex-column">
+    <div class="flex-element">
+        flex-element
+    </div>
+    <div class="flex-element">
+        flex-element
+    </div>
+</div>
+
+
+<div>display: flex + flex-wrap: nowrap(по умолчанию)</div>
+<div class="flex-container">
+    <div class="flex-element flex-element-100">1</div>
+    <div class="flex-element flex-element-100">2</div>
+    <div class="flex-element flex-element-100">3</div>
+    <div class="flex-element flex-element-100">4</div>
+    <div class="flex-element flex-element-100">5</div>
+    <div class="flex-element flex-element-100">6</div>
+    <div class="flex-element flex-element-100">7</div>
+    <div class="flex-element flex-element-100">8</div>
+    <div class="flex-element flex-element-100">9</div>
+    <div class="flex-element flex-element-100">10</div>
+</div>
+
+<div>display: flex + flex-wrap: wrap</div>
+<div class="flex-container flex-wrap">
+    <div class="flex-element flex-element-100">1</div>
+    <div class="flex-element flex-element-100">2</div>
+    <div class="flex-element flex-element-100">3</div>
+    <div class="flex-element flex-element-100">4</div>
+    <div class="flex-element flex-element-100">5</div>
+    <div class="flex-element flex-element-100">6</div>
+    <div class="flex-element flex-element-100">7</div>
+    <div class="flex-element flex-element-100">8</div>
+    <div class="flex-element flex-element-100">9</div>
+    <div class="flex-element flex-element-100">10</div>
+</div>
+
+
+<div>display: flex</div>
+<div class="flex-container flex-wrap">
+    <div class="flex-element flex-grow-1">1</div>
+    <div class="flex-element flex-grow-1">2</div>
+    <div class="flex-element flex-grow-1">3</div>
+    <div class="flex-element flex-grow-1">4</div>
+</div>
+
+
+<div>display: flex</div>
+<div class="flex-container">
+    <div class="flex-element flex-grow-1">1 grow-1</div>
+    <div class="flex-element flex-grow-1">2 grow-1</div>
+    <div class="flex-element flex-grow-1">3 grow-1</div>
+    <div class="flex-element flex-grow-2">4 grow-2</div>
+</div>
+
+
+
+<div>display: flex</div>
+<div class="flex-container">
+    <div class="flex-element flex-element-200">1 flex-element-200</div>
+    <div class="flex-element flex-element-200">2 flex-element-200</div>
+    <div class="flex-element flex-element-200">3 flex-element-200</div>
+    <div class="flex-element flex-shrink-2">4 flex-shrink-2</div>
+</div>
+
+<div>display: flex</div>
+<div class="flex-container">
+    <div class="flex-element flex-element-200">1 flex-element-200</div>
+    <div class="flex-element flex-element-200">2 flex-element-200</div>
+    <div class="flex-element flex-element-200">3 flex-element-200</div>
+    <div class="flex-element flex-shrink-0">4 flex-shrink-0</div>
+</div>
+
+</body>
