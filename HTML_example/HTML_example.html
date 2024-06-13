@@ -29,7 +29,8 @@
             border: 1px solid black;
             border-radius: 10px;
             margin-bottom: 1em;
-            background: #c8c8c8; /* Цвет фона ячеек */
+            background: #c8c8c8;
+            /* Цвет фона ячеек */
         }
 
         .flex-div {
@@ -43,7 +44,8 @@
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(26, 9, 9, 0.4);
             width: 50%;
-            background: #a0a0a0; /* Цвет фона ячеек */
+            background: #a0a0a0;
+            /* Цвет фона ячеек */
         }
 
         table {
@@ -66,7 +68,7 @@
     </style>
 
     <!-- подключаем подсветку синтаксиса -->
-    <link rel="stylesheet" href="highlight/styles/atom-one-dark.css">
+    <link rel="stylesheet" href="../highlight/styles/atom-one-dark.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
 </head>
 
@@ -75,7 +77,20 @@
     <h1>HTML</h1>
     <div class="flex-container">
         <div class="flex-div">
-            <img src="img/2024-03-12_23-16-22.png" alt="код">
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    Просто текст без всяких там тегов и прочих наворотов, вот так бы и писали сайты !
+    Выведенный тупо на страницу
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
         </div>
         <div class="flex-div">
             Просто текст без всяких там тегов и прочих наворотов, вот так бы и писали сайты !
@@ -321,9 +336,11 @@
         </div>
         <div class="flex-div">
             <h2>Emmet - встроенное расширение в VS Code</h2>
-            <p style="margin: 0;">Вводим названия тэгов, жмём enter и они создаются.</p>
-            <p style="margin: 0;"> *3 - создать три элемента</p>
-            <p style="margin: 0;">[href=#] - прописать свойства тэга</p>
+            <p>
+                Вводим названия тэгов, жмём enter и они создаются. <br>
+                *3 - создать три элемента<br>
+                style="margin: 0;">[href=#] - прописать свойства тэга<br>
+            </p>
         </div>
     </div>
     <!-- ----------------------------------------------------------------------------------------------- -->
