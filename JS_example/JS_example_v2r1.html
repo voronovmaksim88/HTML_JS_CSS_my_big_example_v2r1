@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8"> <!-- кодировка текста -->
     <script src="script.js"></script> <!-- подключаем скрипт -->
     <title>Test JS </title> <!-- прописываем заголовок -->
     <style>
         body {
-            background: lightgray; /* Цвет фона таблицы */
+            background: lightgray;
+            /* Цвет фона таблицы */
         }
 
         * {
@@ -25,8 +27,7 @@
             margin: 0;
         }
 
-        h2 {
-        }
+        h2 {}
 
         ul {
             color: rgb(0, 128, 0);
@@ -34,12 +35,15 @@
 
         table {
             border: 0.5em solid black;
-            background: maroon; /* Цвет фона таблицы */
-            color: white; /* Цвет текста */
+            background: maroon;
+            /* Цвет фона таблицы */
+            color: white;
+            /* Цвет текста */
         }
 
         td {
-            background: navy; /* Цвет фона ячеек */
+            background: navy;
+            /* Цвет фона ячеек */
         }
 
         pre {
@@ -53,7 +57,8 @@
             border: 1px solid black;
             border-radius: 10px;
             margin-bottom: 1em;
-            background: #c8c8c8; /* Цвет фона ячеек */
+            background: #c8c8c8;
+            /* Цвет фона ячеек */
         }
 
         .flex-div {
@@ -67,7 +72,8 @@
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(26, 9, 9, 0.4);
             width: 50%;
-            background: #a0a0a0; /* Цвет фона ячеек */
+            background: #a0a0a0;
+            /* Цвет фона ячеек */
         }
 
         img {
@@ -77,52 +83,53 @@
     </style>
 
     <!-- подключаем подсветку синтаксиса -->
-    <link rel="stylesheet" href="highlight/styles/atom-one-dark.css">
+    <link rel="stylesheet" href="./highlight/styles/atom-one-dark.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
 </head>
+
 <body>
-<h1 style="margin-top: 0.2em">JavaScript</h1>
-<div class="flex-container">
-    <div class="flex-div">
-        <pre><code class="language-javascript">
+    <h1 style="margin-top: 0.2em">JavaScript</h1>
+    <div class="flex-container">
+        <div class="flex-div">
+            <pre><code class="language-javascript">
     console.log('Hello World!'); // Пишем в консоль
     document.getElementById('Div_Hello_World').innerHTML += 'hello word from JS';
         </code></pre>
+        </div>
+        <div class="flex-div" id="Div_Hello_World">
+        </div>
     </div>
-    <div class="flex-div" id="Div_Hello_World">
+    <script>
+        console.log('Hello World!'); // Пишем в консоль
+        document.getElementById('Div_Hello_World').innerHTML += 'hello word from JS';
+    </script>
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <img src="img/2024-03-12_19-41-20.png" alt="код">
+        </div>
+        <div class="flex-div">
+            <img src="img/2024-03-12_20-29-29.png" alt="код">
+            <hr>
+            <input type="button" onclick="sb_yra()" value="button Yes!">
+        </div>
     </div>
-</div>
-<script>
-    console.log('Hello World!'); // Пишем в консоль
-    document.getElementById('Div_Hello_World').innerHTML += 'hello word from JS';
-</script>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <img src="img/2024-03-12_19-41-20.png" alt="код">
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <img src="img/2024-03-12_23-09-15.png" alt="код">
+        </div>
+        <div class="flex-div" id="Div_new_text">
+            <img src="img/2024-03-12_23-10-01.png" alt="код">
+            <hr>
+            <button id="changeTextBtn" onclick="changeTextBtnClick()">Добавить текст</button>
+            <hr>
+        </div>
     </div>
-    <div class="flex-div">
-        <img src="img/2024-03-12_20-29-29.png" alt="код">
-        <hr>
-        <input type="button" onclick="sb_yra()" value="button Yes!">
-    </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <img src="img/2024-03-12_23-09-15.png" alt="код">
-    </div>
-    <div class="flex-div" id="Div_new_text">
-        <img src="img/2024-03-12_23-10-01.png" alt="код">
-        <hr>
-        <button id="changeTextBtn" onclick="changeTextBtnClick()">Добавить текст</button>
-        <hr>
-    </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <pre><code class="language-javascript">
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <pre><code class="language-javascript">
 // создаём константу и выводим её
 const constNum = 123;
 document.getElementById('Div_Const').innerHTML += ('&ltp&gt' + constNum + '&lt/p&gt');
@@ -135,98 +142,98 @@ const constStr= "Это строка. Если дать число, то IDE п�
     " Потому что в проекте включёна проверка  типов // @ts-check";
 document.getElementById('Div_Const').innerHTML += ('&ltp&gt' + constStr + '&lt/p&gt');
         </code></pre>
-    </div>
-    <div class="flex-div" id="Div_Const">
-        <h3>Константы</h3>
-    </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <img src="img/2024-03-16_13-17-01.png" alt="код">
-    </div>
-    <div class="flex-div" id="Div_varString">
-    </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <img src="img/2024-03-20_12-10-17.png" alt="код">
-    </div>
-    <div class="flex-div" id="Div_object1">
-    </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <img src="img/2024-03-20_14-30-38.png" alt="код">
-    </div>
-    <div class="flex-div" id="div_expression">
-    </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <img src="img/2024-03-21_14-03-51.png" alt="код">
-    </div>
-    <div class="flex-div" id="div_dynamic_typing">
-    </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <img src="img/2024-03-21_23-34-20.png" alt="код">
-    </div>
-    <div class="flex-div" id="div_no_dynamic_typing">
-        <div>
-            <h2>Избежание динамической типизации</h2>
         </div>
-        <div>
-            <img src="img/2024-03-21_23-36.png" alt="код">
-        </div>
-        <div>
-            <label>
-                <button onclick="but_change_num()">Записать число</button>
-                <button onclick="but_change_str()">Записать строку</button>
-            </label>
+        <div class="flex-div" id="Div_Const">
+            <h3>Константы</h3>
         </div>
     </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <img src="img/2024-03-24_12-00-12.png" alt="код">
-    </div>
-    <div class="flex-div" id="div_object2">
-        <div>
-            <h2>Объект это ссылочный тип</h2>
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <img src="img/2024-03-16_13-17-01.png" alt="код">
+        </div>
+        <div class="flex-div" id="Div_varString">
         </div>
     </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <img src="img/2024-03-26_12-35-31.png" alt="код">
-    </div>
-    <div class="flex-div" id="div_object3">
-        <div>
-            <h2>Управление объектом</h2>
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <img src="img/2024-03-20_12-10-17.png" alt="код">
+        </div>
+        <div class="flex-div" id="Div_object1">
         </div>
     </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <img src="img/2024-03-27_18-53-27.png" alt="код">
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <img src="img/2024-03-20_14-30-38.png" alt="код">
+        </div>
+        <div class="flex-div" id="div_expression">
+        </div>
     </div>
-    <div class="flex-div" id="div_object4">
-        <h2>Вложенный объект</h2>
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <img src="img/2024-03-21_14-03-51.png" alt="код">
+        </div>
+        <div class="flex-div" id="div_dynamic_typing">
+        </div>
     </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <pre><code class="language-javascript">
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <img src="img/2024-03-21_23-34-20.png" alt="код">
+        </div>
+        <div class="flex-div" id="div_no_dynamic_typing">
+            <div>
+                <h2>Избежание динамической типизации</h2>
+            </div>
+            <div>
+                <img src="img/2024-03-21_23-36.png" alt="код">
+            </div>
+            <div>
+                <label>
+                    <button onclick="but_change_num()">Записать число</button>
+                    <button onclick="but_change_str()">Записать строку</button>
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <img src="img/2024-03-24_12-00-12.png" alt="код">
+        </div>
+        <div class="flex-div" id="div_object2">
+            <div>
+                <h2>Объект это ссылочный тип</h2>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <img src="img/2024-03-26_12-35-31.png" alt="код">
+        </div>
+        <div class="flex-div" id="div_object3">
+            <div>
+                <h2>Управление объектом</h2>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <img src="img/2024-03-27_18-53-27.png" alt="код">
+        </div>
+        <div class="flex-div" id="div_object4">
+            <h2>Вложенный объект</h2>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <pre><code class="language-javascript">
     const myName = "Max"
     const age = 34
     const Me = {
@@ -235,16 +242,16 @@ document.getElementById('Div_Const').innerHTML += ('&ltp&gt' + constStr + '&lt/p
         happy: true
     }
         </code></pre>
-    </div>
+        </div>
 
-    <div class="flex-div" id="div_object5">
-        <h2>Объявление объекта через переменные</h2>
+        <div class="flex-div" id="div_object5">
+            <h2>Объявление объекта через переменные</h2>
+        </div>
     </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <pre><code class="language-javascript">
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <pre><code class="language-javascript">
         const myHome = {
         material: "wood",
         address: function () {
@@ -253,36 +260,36 @@ document.getElementById('Div_Const').innerHTML += ('&ltp&gt' + constStr + '&lt/p
         }
         myHome.address()
         </code></pre>
-    </div>
+        </div>
 
-    <div class="flex-div" id="div_method">
-        <h2>Метод - это свойство объекта значение которого функция</h2>
-        <p>В данном примере address это метод объекта myHome</p>
+        <div class="flex-div" id="div_method">
+            <h2>Метод - это свойство объекта значение которого функция</h2>
+            <p>В данном примере address это метод объекта myHome</p>
+        </div>
     </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <pre><code class="language-javascript">
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <pre><code class="language-javascript">
     // Json
     let person = JSON.parse('{"name": "Ivan", "age":11}')
         </code></pre>
-    </div>
+        </div>
 
-    <div class="flex-div" id="div_JSON1">
-        <h2>JSON</h2>
-        <p>Java script object notation.
-            Это формат обмена данными между компьютерами в интернете.
-            JSON передаётся просто в виде строки
-            Сервер может прислать объект в виде JSON-строки.
-            Для превращения такой строки в объект над её распарсить. JSON.parse()
-        </p>
+        <div class="flex-div" id="div_JSON1">
+            <h2>JSON</h2>
+            <p>Java script object notation.
+                Это формат обмена данными между компьютерами в интернете.
+                JSON передаётся просто в виде строки
+                Сервер может прислать объект в виде JSON-строки.
+                Для превращения такой строки в объект над её распарсить. JSON.parse()
+            </p>
+        </div>
     </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
-<div class="flex-container">
-    <div class="flex-div">
-        <pre><code class="language-javascript">
+    <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <pre><code class="language-javascript">
 // JSON.stringify
 let car = {
     color: "red",
@@ -291,28 +298,29 @@ let car = {
 const div_JSON2 = document.getElementById('div_JSON2');
 div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
         </code></pre>
-    </div>
+        </div>
 
-    <div class="flex-div" id="div_JSON2">
-        <h2>JSON.stringify()</h2>
-        <p>
-            Если надо наоборот передать объект на сервер,
-            то используется метод <b>JSON.stringify()</b>, преобразующий объект в JSON-строку
-        </p>
+        <div class="flex-div" id="div_JSON2">
+            <h2>JSON.stringify()</h2>
+            <p>
+                Если надо наоборот передать объект на сервер,
+                то используется метод <b>JSON.stringify()</b>, преобразующий объект в JSON-строку
+            </p>
+        </div>
     </div>
-</div>
-<!-- ----------------------------------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------------------------------- -->
 
-<!--подсветка синтаксиса кода-->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('pre code').forEach((block) => {
-            hljs.highlightBlock(block);
+    <!--подсветка синтаксиса кода-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
+
 </html>
 
 <script>
@@ -366,7 +374,7 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
 
     // ------------- Как избежать мутации вариант 2-------------------
     // ... оператор разделения объекта на свойства
-    const girl = {...men}
+    const girl = { ...men }
     girl.age = 8
     console.log("girl", girl)
     document.write("girl", JSON.stringify(girl), "<br/>")
@@ -993,7 +1001,7 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
         name: "Ivan",
         country: "Russia"
     }
-    const {name, country} = userProfile  // объявление переменной и присваивание ей значения на основе значения одноимённого свойства объекта
+    const { name, country } = userProfile  // объявление переменной и присваивание ей значения на основе значения одноимённого свойства объекта
     document.write("name=", "<b>", name, "</b>", "<br>")
     document.write("country=", "<b>", country, "</b>", "<br>")
 
@@ -1009,7 +1017,7 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
         ethernet: "optional"
     }
 
-    const PLC2info = ({manufacturer, model, ethernet}) => {
+    const PLC2info = ({ manufacturer, model, ethernet }) => {
         document.write("<br>",
             "Производитель: ", "<b>", manufacturer, "</b>", "<br>",
             "Модель: ", "<b>", model, "</b>", "<br>",
