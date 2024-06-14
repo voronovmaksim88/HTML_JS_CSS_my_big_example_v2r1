@@ -327,18 +327,56 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
     <!-- ----------------------------------------------------------------------------------------------- -->
     <div class="flex-container">
         <div class="flex-div">
-        <pre><code class="language-javascript">
+            <pre><code class="language-javascript">
+            // -------Мутации в JS. Переменные -------
+            let num = 123;
+            div_mutation.innerHTML += "num = " + num + "&lt;br/&gt;";
+            let other_num;
+            other_num = num;
+            div_mutation.innerHTML += "other_num = " + other_num + "&lt;br/&gt;";
+            other_num = 12345;
+            div_mutation.innerHTML += "num = " + num + "&lt;br/&gt;";
+            div_mutation.innerHTML += "other_num = " + other_num + "&lt;br/&gt;";
         </code></pre>
         </div>
 
         <div class="flex-div" id="div_mutation">
-            <h2>Мутации в JS</h2>
-            <p>
-
-            </p>
+            <h2>Мутации в JS. Переменные</h2>
+            <b> переменная хранит непосредственно само своё значение</b>
+            <hr>
         </div>
     </div>
     <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+            <pre><code class="language-javascript">
+                // -------Мутации в JS. Объекты -------
+                const div_mutation2 = document.getElementById("div_mutation2");
+                if (div_mutation2) &#123;
+                  const plane = &#123;
+                    weight: 10,
+                  &#125;;
+                  div_mutation2.innerHTML += "plane = " + JSON.stringify(plane) + "&lt;br/&gt;";
+                  plane.manufacturer = "Russia";
+                  div_mutation2.innerHTML += "plane = " + JSON.stringify(plane);
+                &#125; else &#123;
+                  console.error("Element with id 'div_mutation2' does not exist.");
+                &#125;
+            </code></pre>
+        </div>
+
+        <div class="flex-div" id="div_mutation2">
+            <h2>Мутации в JS. Объекты</h2>
+            <b>Объект- это ссылочный тип</b>
+            <br>
+            <span>Несмотря на то что объект plane это константа всё равно он мутировал,</span>
+            <br>
+            <span>потому что объект это ссылочный тип, а ссылка осталась без изменений.</span>
+            <hr>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------- -->
+
 
 
 
@@ -374,28 +412,8 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
 
 
 <script>
-    // -------Мутации в JS-------
-    document.write("<br/>", "<h3>", "Мутации в JS", "</h3>")
-    let num_1 = 1234
-    console.log(num_1)
-    let num_2;
-    num_2 = num_1;
-    console.log(num_2)
-    num_2 = 12345
-    console.log(num_1)
-    console.log(num_2)
-    // переменная хранит непосредственно само своё значение
 
 
-    const plane = {
-        weight: 10
-    }
-    console.log(plane)
-    plane.manufacturer = "Russia"
-    console.log(plane)
-    document.write("<br/>", "plane", JSON.stringify(plane), "<br/>")
-    // несмотря на то что объект plane это константа всё равно он мутировал, потому что объект это ссылочный тип
-    // ссылка осталась без изменений.
 
     // мутация через копию
     const plane2 = plane
@@ -1266,7 +1284,3 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
     }
 
 </script>
-
-
-
-

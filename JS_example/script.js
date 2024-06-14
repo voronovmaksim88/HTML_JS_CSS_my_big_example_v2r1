@@ -7,6 +7,37 @@
 
 // @ts-check
 
+// Функция для безопасного обновления значения переменной
+function updateValue(variable, newValue) {
+  if (typeof newValue === "number") {
+    variable = newValue;
+  } else {
+    console.error("Значение не является числом");
+  }
+  return variable;
+}
+
+function but_change_num() {
+  myNum = updateValue(myNum, myNum + 1);
+  let div_no_dynamic_typing = document.getElementById("div_no_dynamic_typing");
+  if (div_no_dynamic_typing) {
+    div_no_dynamic_typing.innerHTML += `<p style='color: darkgreen'> myNum = ${myNum} </p>`;
+  } else {
+    console.error("Element with id 'div_no_dynamic_typing' does not exist.");
+  }
+}
+
+function but_change_str() {
+  myNum = updateValue(myNum, "123");
+  let div_no_dynamic_typing = document.getElementById("div_no_dynamic_typing");
+  if (div_no_dynamic_typing) {
+    div_no_dynamic_typing.innerHTML +=
+      "<p style='color: darkred'> Ошибка: Значение не является числом </p> ";
+  } else {
+    console.error("Element with id 'div_no_dynamic_typing' does not exist.");
+  }
+}
+
 // выводим всплывающее окно
 function sb_yra() {
   alert("Yes!!!");
@@ -262,37 +293,34 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("Element with id 'div_JSON2' does not exist.");
   }
+
+  // -------Мутации в JS. Переменные -------
+  const div_mutation = document.getElementById("div_mutation");
+  if (div_mutation) {
+    let num = 123;
+    div_mutation.innerHTML += "num = " + num + "<br/>";
+    let other_num;
+    other_num = num;
+    div_mutation.innerHTML += "other_num = " + other_num + "<br/>";
+    other_num = 12345;
+    div_mutation.innerHTML += "num = " + num + "<br/>";
+    div_mutation.innerHTML += "other_num = " + other_num + "<br/>";
+  } else {
+    console.error("Element with id 'div_mutation' does not exist.");
+  }
+
+  // -------Мутации в JS. Объекты -------
+  const div_mutation2 = document.getElementById("div_mutation2");
+  if (div_mutation2) {
+    const plane = {
+      weight: 10,
+    };
+    div_mutation2.innerHTML += "plane = " + JSON.stringify(plane) + "<br/>";
+    plane.manufacturer = "Russia";
+    div_mutation2.innerHTML += "plane = " + JSON.stringify(plane);
+  } else {
+    console.error("Element with id 'div_mutation2' does not exist.");
+  }
 });
 
 let myNum = 1; // Исходное число
-
-// Функция для безопасного обновления значения переменной
-function updateValue(variable, newValue) {
-  if (typeof newValue === "number") {
-    variable = newValue;
-  } else {
-    console.error("Значение не является числом");
-  }
-  return variable;
-}
-
-function but_change_num() {
-  myNum = updateValue(myNum, myNum + 1);
-  let div_no_dynamic_typing = document.getElementById("div_no_dynamic_typing");
-  if (div_no_dynamic_typing) {
-    div_no_dynamic_typing.innerHTML += `<p style='color: darkgreen'> myNum = ${myNum} </p>`;
-  } else {
-    console.error("Element with id 'div_no_dynamic_typing' does not exist.");
-  }
-}
-
-function but_change_str() {
-  myNum = updateValue(myNum, "123");
-  let div_no_dynamic_typing = document.getElementById("div_no_dynamic_typing");
-  if (div_no_dynamic_typing) {
-    div_no_dynamic_typing.innerHTML +=
-      "<p style='color: darkred'> Ошибка: Значение не является числом </p> ";
-  } else {
-    console.error("Element with id 'div_no_dynamic_typing' does not exist.");
-  }
-}
