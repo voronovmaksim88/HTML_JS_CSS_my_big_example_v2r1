@@ -27,8 +27,6 @@
             margin: 0;
         }
 
-        h2 {}
-
         ul {
             color: rgb(0, 128, 0);
         }
@@ -202,11 +200,29 @@ document.getElementById('Div_Const').innerHTML += ('&ltp&gt' + constStr + '&lt/p
     <!-- ----------------------------------------------------------------------------------------------- -->
     <div class="flex-container">
         <div class="flex-div">
-            <img src="img/2024-03-24_12-00-12.png" alt="код">
+            <pre><code class="language-javascript">
+// Объект это ссылочный тип
+let div_object2 = document.getElementById("div_object2");
+if (div_object2) &#123;
+    const objectA = &#123;
+    property1: 10,
+    property2: true,
+    &#125;;
+    div_object2.innerHTML += `&lt;p&gt; objectA.property1 =  $&#123;objectA.property1&#125; &lt;/p&gt;`;
+    let copyOfA;
+    copyOfA = objectA;
+    copyOfA.property1 = 20;
+    div_object2.innerHTML += `&lt;p&gt; objectA.property1 =  $&#123;objectA.property1&#125; &lt;/p&gt;`;
+&#125; else &#123;
+    console.error("Element with id 'div_object2' does not exist.");
+&#125;
+            </code></pre>
         </div>
+
         <div class="flex-div" id="div_object2">
             <div>
                 <h2>Объект это ссылочный тип</h2>
+                <p> Копия объекта тоже содержит только ссылку на область памяти </p>
             </div>
         </div>
     </div>
@@ -309,6 +325,27 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
         </div>
     </div>
     <!-- ----------------------------------------------------------------------------------------------- -->
+    <div class="flex-container">
+        <div class="flex-div">
+        <pre><code class="language-javascript">
+        </code></pre>
+        </div>
+
+        <div class="flex-div" id="div_mutation">
+            <h2>Мутации в JS</h2>
+            <p>
+
+            </p>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
 
     <!--подсветка синтаксиса кода-->
     <script>
@@ -1229,3 +1266,7 @@ div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
     }
 
 </script>
+
+
+
+

@@ -62,7 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let Div_object1 = document.getElementById("Div_object1");
   if (Div_object1) {
     Div_object1.innerHTML = "<h3>" + "Объект 1" + "</h3>";
-    let object1 = {// Создание объекта
+    let object1 = {
+      // Создание объекта
       property1: true,
       property2: 10,
     };
@@ -77,103 +78,120 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ВЫРАЖЕНИЯ
   let div_expression = document.getElementById("div_expression");
-  if (div_expression){
-  div_expression.innerHTML += "<h3>" + "ВЫРАЖЕНИЯ" + "</h3>";
-  div_expression.innerHTML +=
-    "<b>" +
-    "Выражение" +
-    "</b>" +
-    " (expression) в JavaScript - это комбинация значений," +
-    " переменных, операторов и вызовов функций, которая вычисляется в значение." +
-    "<br/>" +
-    " Любое выражение ВСЕГДА возвращае значение";
-  const string = "ABC";
-  // строка это выражение если передать её интерпритатору то он её же и вернёт
-  div_expression.innerHTML += "строка " + string + "<br/>";
+  if (div_expression) {
+    div_expression.innerHTML += "<h3>" + "ВЫРАЖЕНИЯ" + "</h3>";
+    div_expression.innerHTML +=
+      "<b>" +
+      "Выражение" +
+      "</b>" +
+      " (expression) в JavaScript - это комбинация значений," +
+      " переменных, операторов и вызовов функций, которая вычисляется в значение." +
+      "<br/>" +
+      " Любое выражение ВСЕГДА возвращае значение";
+    const string = "ABC";
+    // строка это выражение если передать её интерпритатору то он её же и вернёт
+    div_expression.innerHTML += "строка " + string + "<br/>";
 
-  const num = 123;
-  // число это выражение если передать его интерпритатору то он его же и вернёт
-  div_expression.innerHTML += "число " + num + "<br/>";
+    const num = 123;
+    // число это выражение если передать его интерпритатору то он его же и вернёт
+    div_expression.innerHTML += "число " + num + "<br/>";
 
-  const sum12 = 1 + 2;
-  // Это тоже выражение если передать его интерпритатору то он вернёт 3
-  div_expression.innerHTML += "1 + 2 = " + sum12 + "<br/>";
+    const sum12 = 1 + 2;
+    // Это тоже выражение если передать его интерпритатору то он вернёт 3
+    div_expression.innerHTML += "1 + 2 = " + sum12 + "<br/>";
 
-  let constNum1;
-  // constNum1=123 - Это тоже выражение если передать его интерпритатору то он вернёт 123
-  div_expression.innerHTML +=
-    "constNum1 = " + (constNum1 = 123) + ", точно " + constNum1 + "<br/>";
+    let constNum1;
+    // constNum1=123 - Это тоже выражение если передать его интерпритатору то он вернёт 123
+    div_expression.innerHTML +=
+      "constNum1 = " + (constNum1 = 123) + ", точно " + constNum1 + "<br/>";
 
-  // конкатенация строк это тоже выражение, возвращающее сумму строк
-  div_expression.innerHTML += "str1" + " + " + "str2" + "<br/>";
+    // конкатенация строк это тоже выражение, возвращающее сумму строк
+    div_expression.innerHTML += "str1" + " + " + "str2" + "<br/>";
 
-  // 1===1 это оператор сравнения, возвращает true или false
-  div_expression.innerHTML += "1 = 1 ? " + (1 === 1) + "<br/>";
+    // 1===1 это оператор сравнения, возвращает true или false
+    div_expression.innerHTML += "1 = 1 ? " + (1 === 1) + "<br/>";
 
-  // 2 < 1 это оператор сравнения, возвращает true или false
-  div_expression.innerHTML += "2 < 1 ? " + (2 < 1) + "<br/>";
+    // 2 < 1 это оператор сравнения, возвращает true или false
+    div_expression.innerHTML += "2 < 1 ? " + (2 < 1) + "<br/>";
 
-  function myFunction() {}
+    function myFunction() {}
 
-  // функция это тоже выражение если в ней нет явного return то она просто вернёт undefined
-  div_expression.innerHTML +=
-    "Функция без return возвращает " + "<b>" + myFunction() + "</b>";
-  }else{
+    // функция это тоже выражение если в ней нет явного return то она просто вернёт undefined
+    div_expression.innerHTML +=
+      "Функция без return возвращает " + "<b>" + myFunction() + "</b>";
+  } else {
     console.error("Element with id 'div_expression' does not exist.");
   }
 
   //Динамическая типизация
   let div_dynamic_typing = document.getElementById("div_dynamic_typing");
-  div_dynamic_typing.innerHTML += `<h3> Динамическая типизация </h3>`;
-  let varible;
-  varible = 123;
-  div_dynamic_typing.innerHTML += `varible = ${varible} тип число <br/>`;
-  varible = "abc";
-  div_dynamic_typing.innerHTML += `varible = ${varible} тип строка <br/>`;
-  varible = true;
-  div_dynamic_typing.innerHTML += `varible = ${varible} тип логический <br/>`;
+  if (div_dynamic_typing) {
+    div_dynamic_typing.innerHTML += `<h3> Динамическая типизация </h3>`;
+    let varible;
+    varible = 123;
+    div_dynamic_typing.innerHTML += `varible = ${varible} тип число <br/>`;
+    varible = "abc";
+    div_dynamic_typing.innerHTML += `varible = ${varible} тип строка <br/>`;
+    varible = true;
+    div_dynamic_typing.innerHTML += `varible = ${varible} тип логический <br/>`;
+  } else {
+    console.error("Element with id 'div_dynamic_typing' does not exist.");
+  }
 
   // Для избежания динамической типизации надо использоват константы
   let div_no_dynamic_typing = document.getElementById("div_no_dynamic_typing");
   const e = 1;
-  div_no_dynamic_typing.innerHTML += `<br> e = ${e} константа <br>`;
-  div_no_dynamic_typing.innerHTML += `e = 2 выдаст ошибку`;
+  if (div_no_dynamic_typing) {
+    div_no_dynamic_typing.innerHTML += `<br> e = ${e} константа <br>`;
+    div_no_dynamic_typing.innerHTML += `e = 2 выдаст ошибку`;
+  } else {
+    console.error("Element with id 'div_no_dynamic_typing' does not exist.");
+  }
 
   // Объект это ссылочный тип
   let div_object2 = document.getElementById("div_object2");
-  div_object2.innerHTML += `<p> Копия объекта тоже содержит только ссылку на область памяти </p>`;
   const objectA = {
     property1: 10,
     property2: true,
   };
-  div_object2.innerHTML += `<p> objectA.property1 =  ${objectA.property1} </p>`;
-  let copyOfA;
-  copyOfA = objectA;
-  copyOfA.property1 = 20;
-  div_object2.innerHTML += `<p> objectA.property1 =  ${objectA.property1} </p>`;
+  if (div_object2) {
+    div_object2.innerHTML += `<p> objectA.property1 =  ${objectA.property1} </p>`;
+    let copyOfA;
+    copyOfA = objectA;
+    copyOfA.property1 = 20;
+    div_object2.innerHTML += `<p> objectA.property1 =  ${objectA.property1} </p>`;
+  } else {
+    console.error("Element with id 'div_object2' does not exist.");
+  }
 
   // Управление объектом
   let div_object3 = document.getElementById("div_object3");
-  div_object3.innerHTML += "Добавляем новое свойство объекту" + "<br/>";
-  objectA.newproperty = 123; // добавляем новое свойство объекту
-  div_object3.innerHTML += `objectA.newproperty = ${objectA.newproperty} <br/>`;
-  div_object3.innerHTML += "<br/>" + "удаляем свойство объекта" + "<br/>";
-  delete objectA.newproperty; // удаляем свойство объекта
-  div_object3.innerHTML += JSON.stringify(objectA) + "<br/>"; // про JSON далее будет
-  div_object3.innerHTML += "<br/>";
-  div_object3.innerHTML +=
-    "создаём свойство объекта с именем как у переменной" + "<br/>";
-  const propertyName = "property3";
-  objectA[propertyName] = "value3";
-  div_object3.innerHTML += JSON.stringify(objectA) + "<br/>"; // про JSON далее будет
-  div_object3.innerHTML +=
-    "<br/>" + "добавляем свойства к копии объекта, " + "<br/>";
-  div_object3.innerHTML +=
-    "исходный объект тоже получает эти свойства, " + "<br/>";
-  div_object3.innerHTML +=
-    "объект и его копия это ссылки на одну и ту же область памяти";
-  copyOfA.property4 = 123;
-  div_object3.innerHTML += "<br/>" + (JSON.stringify(objectA) + "<br/>");
+  if (div_object3) {
+    let copyOfA;
+    copyOfA = objectA;
+    div_object3.innerHTML += "Добавляем новое свойство объекту" + "<br/>";
+    objectA.newproperty = 123; // добавляем новое свойство объекту
+    div_object3.innerHTML += `objectA.newproperty = ${objectA.newproperty} <br/>`;
+    div_object3.innerHTML += "<br/>" + "удаляем свойство объекта" + "<br/>";
+    delete objectA.newproperty; // удаляем свойство объекта
+    div_object3.innerHTML += JSON.stringify(objectA) + "<br/>"; // про JSON далее будет
+    div_object3.innerHTML += "<br/>";
+    div_object3.innerHTML +=
+      "создаём свойство объекта с именем как у переменной" + "<br/>";
+    const propertyName = "property3";
+    objectA[propertyName] = "value3";
+    div_object3.innerHTML += JSON.stringify(objectA) + "<br/>"; // про JSON далее будет
+    div_object3.innerHTML +=
+      "<br/>" + "добавляем свойства к копии объекта, " + "<br/>";
+    div_object3.innerHTML +=
+      "исходный объект тоже получает эти свойства, " + "<br/>";
+    div_object3.innerHTML +=
+      "объект и его копия это ссылки на одну и ту же область памяти";
+    copyOfA.property4 = 123;
+    div_object3.innerHTML += "<br/>" + (JSON.stringify(objectA) + "<br/>");
+  } else {
+    console.error("Element with id 'div_object3' does not exist.");
+  }
 
   // Вложенный объект
   let div_object4 = document.getElementById("div_object4");
@@ -184,9 +202,13 @@ document.addEventListener("DOMContentLoaded", function () {
       country: "Russian",
     },
   };
-  div_object4.innerHTML += JSON.stringify(city) + "<br/>";
-  city.info.popylar = 0;
-  div_object4.innerHTML += JSON.stringify(city) + "<br/>";
+  if (div_object4) {
+    div_object4.innerHTML += JSON.stringify(city) + "<br/>";
+    city.info.popylar = 0;
+    div_object4.innerHTML += JSON.stringify(city) + "<br/>";
+  } else {
+    console.error("Element with id 'div_object4' does not exist.");
+  }
 
   // объявляем объект используя в качесве свойств объявленные ранее переменные
   const myName = "Max";
@@ -198,8 +220,12 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   const div_object5 = document.getElementById("div_object5");
   console.table(Me); // используем табличный вывод
-  div_object5.innerHTML += `${JSON.stringify(Me)} <br/>`;
-  div_object5.innerHTML += "порядок свойств в объекте не имеет значения";
+  if (div_object5) {
+    div_object5.innerHTML += `${JSON.stringify(Me)} <br/>`;
+    div_object5.innerHTML += "порядок свойств в объекте не имеет значения";
+  } else {
+    console.error("Element with id 'div_object5' does not exist.");
+  }
 
   // Метод
   const myHome = {
@@ -210,12 +236,20 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   myHome.adress();
   const div_method = document.getElementById("div_method");
-  div_method.innerHTML += "<br/>" + JSON.stringify(myHome) + "<br/>";
+  if (div_method) {
+    div_method.innerHTML += "<br/>" + JSON.stringify(myHome) + "<br/>";
+  } else {
+    console.error("Element with id 'div_method' does not exist.");
+  }
 
   // Json
   let person = JSON.parse('{"name": "Ivan", "age":11}');
   const div_JSON1 = document.getElementById("div_JSON1");
-  div_JSON1.innerHTML += "<br/>" + JSON.stringify(person) + "<br/>";
+  if (div_JSON1) {
+    div_JSON1.innerHTML += "<br/>" + JSON.stringify(person) + "<br/>";
+  } else {
+    console.error("Element with id 'div_JSON1' does not exist.");
+  }
 
   // JSON.stringify
   let car = {
@@ -223,7 +257,11 @@ document.addEventListener("DOMContentLoaded", function () {
     price: 10,
   };
   const div_JSON2 = document.getElementById("div_JSON2");
-  div_JSON2.innerHTML += "<br/>" + JSON.stringify(car);
+  if (div_JSON2) {
+    div_JSON2.innerHTML += "<br/>" + JSON.stringify(car);
+  } else {
+    console.error("Element with id 'div_JSON2' does not exist.");
+  }
 });
 
 let myNum = 1; // Исходное число
@@ -241,12 +279,20 @@ function updateValue(variable, newValue) {
 function but_change_num() {
   myNum = updateValue(myNum, myNum + 1);
   let div_no_dynamic_typing = document.getElementById("div_no_dynamic_typing");
-  div_no_dynamic_typing.innerHTML += `<p style='color: darkgreen'> myNum = ${myNum} </p>`;
+  if (div_no_dynamic_typing) {
+    div_no_dynamic_typing.innerHTML += `<p style='color: darkgreen'> myNum = ${myNum} </p>`;
+  } else {
+    console.error("Element with id 'div_no_dynamic_typing' does not exist.");
+  }
 }
 
 function but_change_str() {
   myNum = updateValue(myNum, "123");
   let div_no_dynamic_typing = document.getElementById("div_no_dynamic_typing");
-  div_no_dynamic_typing.innerHTML +=
-    "<p style='color: darkred'> Ошибка: Значение не является числом </p> ";
+  if (div_no_dynamic_typing) {
+    div_no_dynamic_typing.innerHTML +=
+      "<p style='color: darkred'> Ошибка: Значение не является числом </p> ";
+  } else {
+    console.error("Element with id 'div_no_dynamic_typing' does not exist.");
+  }
 }
