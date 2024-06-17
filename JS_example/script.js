@@ -120,19 +120,19 @@ document.addEventListener("DOMContentLoaded", function () {
       "<br/>" +
       " Любое выражение ВСЕГДА возвращае значение";
     const string = "ABC";
-    // строка это выражение если передать её интерпритатору то он её же и вернёт
+    // строка это выражение если передать её интерпретатору то он её же и вернёт
     div_expression.innerHTML += "строка " + string + "<br/>";
 
     const num = 123;
-    // число это выражение если передать его интерпритатору то он его же и вернёт
+    // число это выражение если передать его интерпретатору то он его же и вернёт
     div_expression.innerHTML += "число " + num + "<br/>";
 
     const sum12 = 1 + 2;
-    // Это тоже выражение если передать его интерпритатору то он вернёт 3
+    // Это тоже выражение если передать его интерпретатору то он вернёт 3
     div_expression.innerHTML += "1 + 2 = " + sum12 + "<br/>";
 
     let constNum1;
-    // constNum1=123 - Это тоже выражение если передать его интерпритатору то он вернёт 123
+    // constNum1=123 - Это тоже выражение если передать его интерпретатору то он вернёт 123
     div_expression.innerHTML +=
       "constNum1 = " + (constNum1 = 123) + ", точно " + constNum1 + "<br/>";
 
@@ -158,18 +158,18 @@ document.addEventListener("DOMContentLoaded", function () {
   let div_dynamic_typing = document.getElementById("div_dynamic_typing");
   if (div_dynamic_typing) {
     div_dynamic_typing.innerHTML += `<h3> Динамическая типизация </h3>`;
-    let varible;
-    varible = 123;
-    div_dynamic_typing.innerHTML += `varible = ${varible} тип число <br/>`;
-    varible = "abc";
-    div_dynamic_typing.innerHTML += `varible = ${varible} тип строка <br/>`;
-    varible = true;
-    div_dynamic_typing.innerHTML += `varible = ${varible} тип логический <br/>`;
+    let variable;
+    variable = 123;
+    div_dynamic_typing.innerHTML += `varible = ${variable} тип число <br/>`;
+    variable = "abc";
+    div_dynamic_typing.innerHTML += `varible = ${variable} тип строка <br/>`;
+    variable = true;
+    div_dynamic_typing.innerHTML += `varible = ${variable} тип логический <br/>`;
   } else {
     console.error("Element with id 'div_dynamic_typing' does not exist.");
   }
 
-  // Для избежания динамической типизации надо использоват константы
+  // Для избежания динамической типизации надо использовать константы
   let div_no_dynamic_typing = document.getElementById("div_no_dynamic_typing");
   const e = 1;
   if (div_no_dynamic_typing) {
@@ -208,14 +208,14 @@ document.addEventListener("DOMContentLoaded", function () {
     div_object3.innerHTML += JSON.stringify(objectA) + "<br/>"; // про JSON далее будет
     div_object3.innerHTML += "<br/>";
     div_object3.innerHTML +=
-      "создаём свойство объекта с именем как у переменной" + "<br/>";
+      "Создаём свойство объекта с именем как у переменной" + "<br/>";
     const propertyName = "property3";
     objectA[propertyName] = "value3";
     div_object3.innerHTML += JSON.stringify(objectA) + "<br/>"; // про JSON далее будет
     div_object3.innerHTML +=
-      "<br/>" + "добавляем свойства к копии объекта, " + "<br/>";
+      "<br/>" + "Добавляем свойства к копии объекта, " + "<br/>";
     div_object3.innerHTML +=
-      "исходный объект тоже получает эти свойства, " + "<br/>";
+      "Исходный объект тоже получает эти свойства, " + "<br/>";
     div_object3.innerHTML +=
       "объект и его копия это ссылки на одну и ту же область памяти";
     copyOfA.property4 = 123;
@@ -229,19 +229,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const city = {
     cityName: 1,
     info: {
-      popylar: 123,
+      popular: 123,
       country: "Russian",
     },
   };
   if (div_object4) {
     div_object4.innerHTML += JSON.stringify(city) + "<br/>";
-    city.info.popylar = 0;
+    city.info.popular = 0;
     div_object4.innerHTML += JSON.stringify(city) + "<br/>";
   } else {
     console.error("Element with id 'div_object4' does not exist.");
   }
 
-  // объявляем объект используя в качесве свойств объявленные ранее переменные
+  // объявляем объект используя в качестве свойств объявленные ранее переменные
   const myName = "Max";
   const age = 34;
   const Me = {
