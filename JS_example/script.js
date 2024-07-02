@@ -43,7 +43,7 @@ function sb_yra() {
   alert("Yes!!!");
 }
 
-// обрабатываем нажатие кнопки
+// Вписываем новый текст по нажатию кнопки
 function changeTextBtnClick() {
   let div = document.getElementById("Div_new_text");
   let newText = document.createElement("p"); // Создаём новый элемент p
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
     div_object3.innerHTML += "Добавляем новое свойство объекту" + "<br/>";
     objectA.newproperty = 123; // добавляем новое свойство объекту
     div_object3.innerHTML += `objectA.newproperty = ${objectA.newproperty} <br/>`;
-    div_object3.innerHTML += "<br/>" + "удаляем свойство объекта" + "<br/>";
+    div_object3.innerHTML += "<br/>" + "Удаляем свойство объекта" + "<br/>";
     delete objectA.newproperty; // удаляем свойство объекта
     div_object3.innerHTML += JSON.stringify(objectA) + "<br/>"; // про JSON далее будет
     div_object3.innerHTML += "<br/>";
