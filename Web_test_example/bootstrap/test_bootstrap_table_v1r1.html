@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Таблица</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Подключаем библиотеку стилей CSS от bootstrap -->
+    <!-- https://bootstrapshuffle.com/classes - тут описание всех классов есть -->
+    <style>
+        button:hover {
+            color: blue;
+        }
+
+        button {
+            background: aqua;
+            border: none;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center my-5">
+        <!-- Элемент <div> является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого.
+    container - класса из библиотеки bootstrap
+    text-center - тоже класс из библиотеки bootstrap, чтобы отцентровать текст и картинку -->
+        <!-- my-5 - отступ по вертикали 5 чегототам -->
+
+        <div class="row">
+            <!-- class="row" - внутри контейнера создаём типа строку -->
+
+            <table id="myTable" class="table table-striped table-bordered">
+                <tr>
+                    <td></td>
+                    <td><b>Заявка</b></td>
+                    <td><b>Заказчик</b></td>
+                </tr>
+                <tr id="buttonRow1">
+                    <th><button onclick="addOrRemoveRow('buttonRow1')">⋮</button></th>
+                    <td>1</td>
+                    <td>хороший</td>
+                </tr>
+                <tr id="buttonRow2">
+                    <td><button onclick="addOrRemoveRow('buttonRow2')">⋮</button></td>
+                    <td>2</td>
+                    <td>норм</td>
+                </tr>
+                <tr id="buttonRow3">
+                    <td><button onclick="addOrRemoveRow('buttonRow3')">⋮</button></td>
+                    <td>3</td>
+                    <td>плохой</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script>
+        var isRowAdded = false;
+
+        function addOrRemoveRow(button_id) {
+            var table = document.getElementById("myTable");
+            var row = document.getElementById(button_id);
+            var newIndex = row.rowIndex + 1;
+            var isRowAdded = row.dataset.isRowAdded === 'true';
+
+            if (isRowAdded) {
+                table.deleteRow(newIndex);
+                row.dataset.isRowAdded = 'false';
+            } else {
+                var newRow = table.insertRow(newIndex);
+                var cell1 = newRow.insertCell(0);
+                cell1.colSpan = "3";
+                cell1.innerHTML = `<ol>
+                                <li>Элемент 1</li>
+                                <li>Элемент 2</li>
+                                <li>Элемент 3</li>
+                               </ol>
+                               <ul>
+                                <li>Элемент 1</li>
+                                <li>Элемент 2</li>
+                                <li>Элемент 3</li>
+                               </ul>`;
+                row.dataset.isRowAdded = 'true';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

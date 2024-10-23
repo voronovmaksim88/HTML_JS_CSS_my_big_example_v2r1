@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>кнопки</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<!-- Подключаем библиотеку стилей CSS от bootstrap -->
+<!-- https://bootstrapshuffle.com/classes - тут описание всех классов есть -->
+    <style>
+        button:hover {
+            color: blue;
+        }
+        button {
+            background: aqua ;
+            border: none;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a class="btn btn-secondary" id="myButton2">
+        Расчёт стоимости
+    </a>
+
+    
+<script>
+document.getElementById('myButton2').onclick = function() {
+    
+    // Проверяем текущий класс кнопки
+    var myButtonClass = document.getElementById('myButton2').className;
+
+    // Если текущий класс кнопки 'btn btn-primary', меняем его на 'btn btn-secondary'
+    // Если текущий класс кнопки не 'btn btn-primary', меняем его на 'btn btn-primary'
+    if (myButtonClass === 'btn btn-primary') {
+        document.getElementById('myButton2').className = 'btn btn-secondary';
+    } else {
+        document.getElementById('myButton2').className = 'btn btn-primary';
+    }
+};
+</script>
+</body>
+</html>

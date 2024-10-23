@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ДИ-ТВ-К65</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <!-- Подключаем библиотеку стилей CSS от bootstrap -->
+  <!-- https://bootstrapshuffle.com/classes - тут описание всех классов есть -->
+
+  <style>
+    .rounted-img {
+      width: 60%;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(26, 9, 9, 0.4);
+      padding: 0.5em;
+      margin-bottom: 1em;
+      margin-top: 4%;
+    }
+  </style>
+
+  <style>
+    body {
+      background-image: url('images/fon.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+
+  <style>
+    .col-lg-6 {
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 0 40px rgba(26, 9, 9, 0.9);
+    }
+  </style>
+
+  <style>
+    .btn {
+      margin-bottom: 1em;
+    }
+  </style>
+
+  <style>
+    .text-muted {
+      text-align: left;
+      margin-left: 2%;
+      margin-right: 2%;
+      /* Выравнивание по ширине */
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container text-center my-5">
+
+    <!-- Элемент <div> является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого.
+    container - класса из библиотеки bootstrap
+    text-center - тоже класс из библиотеки bootstrap, чтобы отцентровать текст и картинку -->
+    <!-- my-5 - отступ по вертикали 5 чегототам -->
+    <div class="row">
+      <!-- class="row" - внутри контейнера создаём типа строку -->
+
+      <div class="col-lg-6 mx-auto rounded-4">
+        <!-- rounded-4 - скругление краёв -->
+        <!-- col-lg-6 - это ширина 6/12, т.е. половина от родительско элемента -->
+
+        <img class="rounted-img" src="Di_TV.png" alt="Датчик влажности" />
+        <!-- img - image тег для вставки изображеня 
+      src - sorse источник изображения
+      alt - альтернативная надпись если файл избражения не найден -->
+        <H2>Датчик температуры и влажности</H2>
+        <!-- H2 - заголовок второго уровня -->
+        <H1>ДИ-ТВ-К65</H1>
+        <!-- H1 - заголовок первого уровня -->
+        <p class="text-muted">
+          Датчик имеет канальное исполнение для установки на воздуховод системы вентиляции.
+          Передача показаний осуществляется по интерфейсу RS-485, протокол Modbus RTU.
+          На корпусе имеются два гермоввода для удобного крепления кабелей.
+          Зонд выполнен из нержавеющей стали.
+          На плате расположен переключатель адреса.
+          Имеется светодиодная индикация питания и передачи данных.
+        </p>
+        <button class="btn btn-primary">
+          Документация
+        </button>
+        <button class="btn btn-primary">
+          Характеристики
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

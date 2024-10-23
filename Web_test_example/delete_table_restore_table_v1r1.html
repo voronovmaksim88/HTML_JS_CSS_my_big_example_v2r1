@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Таблица</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
+</head>
+
+<body>
+<div class="container text-center my-5">
+    <table id="myTable" class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Data Row 1 Col 1</td>
+            <td>Data Row 1 Col 2</td>
+            <td>Data Row 1 Col 3</td>
+        </tr>
+        <tr>
+            <td>Data Row 2 Col 1</td>
+            <td>Data Row 2 Col 2</td>
+            <td>Data Row 2 Col 3</td>
+        </tr>
+        <tr>
+            <td>Data Row 3 Col 1</td>
+            <td>Data Row 3 Col 2</td>
+            <td>Data Row 3 Col 3</td>
+        </tr>
+        <tr>
+            <td>Data Row 4 Col 1</td>
+            <td>Data Row 4 Col 2</td>
+            <td>Data Row 4 Col 3</td>
+        </tr>
+        <!-- Другие строки данных -->
+        </tbody>
+    </table>
+</div>
+
+<div class="container text-center my-5">
+    <button id="removeTable">Удалить данные таблицы</button>
+    <button id="restoreTable">Восстановить данные таблицы</button>
+</div>
+</body>
+
+<script>
+    // Глобальная переменная для хранения данных из таблицы
+    let savedTableRows = [];
+
+    document.getElementById('removeTable').addEventListener('click', function () {
+        const tableBody = document.querySelector('#myTable tbody');
+        // Сохраняем данные, перед тем как удалить строки
+        savedTableRows = Array.from(tableBody.rows).map(row => Array.from(row.cells).map(cell => cell.innerHTML));
+        // Очищаем содержимое tbody, удаляя все строки кроме шапки
+        tableBody.innerHTML = '';
+    });
+
+    document.getElementById('restoreTable').addEventListener('click', function () {
+        const tableBody = document.querySelector('#myTable tbody');
+        // Восстанавливаем таблицу из сохраненных данных
+        savedTableRows.forEach(rowData => {
+            const row = document.createElement('tr');
+            rowData.forEach(cellData => {
+                const cell = document.createElement('td');
+                cell.innerHTML = cellData;
+                row.appendChild(cell);
+            });
+            tableBody.appendChild(row);
+        });
+    });
+</script>
+
+</html>

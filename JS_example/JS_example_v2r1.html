@@ -176,6 +176,7 @@
 
 <div class="flex-container">
     <div class="flex-div">
+        <h2>JS</h2>
         <pre>
           <code class="language-javascript">
             // создаём константу и выводим её
@@ -184,7 +185,8 @@
 
             // создаём константу заданного типа
             /** * @type {string} */
-            const constStr= "Это строка. Если задать число, то IDE подсветит ошибку." + " Потому что в проекте включёна проверка типов // @ts-check";
+            const constStr += "Это строка. Если задать число, то IDE подсветит ошибку."
+            const constStr += " Потому что в проекте включёна проверка типов // @ts-check";
             document.getElementById('Div_Const').innerHTML += ('&ltp&gt' + constStr + '&lt/p&gt');
           </code>
         </pre>
@@ -251,7 +253,17 @@
 <div class="flex-container">
     <div class="flex-div">
         <pre>
-          <code class="language-javascript">// Объект это ссылочный тип let div_object2 = document.getElementById("div_object2"); if (div_object2) &#123; const objectA = &#123; property1: 10, property2: true, &#125;; div_object2.innerHTML += `&lt;p&gt; objectA.property1 = $&#123;objectA.property1&#125; &lt;/p&gt;`; let copyOfA; copyOfA = objectA; copyOfA.property1 = 20; div_object2.innerHTML += `&lt;p&gt; objectA.property1 = $&#123;objectA.property1&#125; &lt;/p&gt;`; &#125; else &#123; console.error("Element with id 'div_object2' does not exist."); &#125;</code>
+          <code class="language-javascript">
+              // Объект это ссылочный тип
+              let div_object2 = document.getElementById("div_object2");
+              if (div_object2) &#123; const objectA = &#123;
+              property1: 10, property2: true, &#125;;
+              div_object2.innerHTML += `&lt;p&gt; objectA.property1 = $&#123;objectA.property1&#125; &lt;/p&gt;`;
+              let copyOfA; copyOfA = objectA; copyOfA.property1 = 20;
+              div_object2.innerHTML += `&lt;p&gt; objectA.property1 = $&#123;
+              objectA.property1&#125; &lt;/p&gt;`; &#125; else &#123;
+              console.error("Element with id 'div_object2' does not exist."); &#125;
+          </code>
         </pre>
     </div>
 
@@ -289,7 +301,10 @@
 <div class="flex-container">
     <div class="flex-div">
         <pre>
-          <code class="language-javascript">const myName = "Max" const age = 34 const Me = { myName, age, happy: true }</code>
+          <code class="language-javascript">
+              const myName = "Max" const age = 34
+              const Me = { myName, age, happy: true }
+          </code>
         </pre>
     </div>
 
@@ -302,7 +317,10 @@
 <div class="flex-container">
     <div class="flex-div">
         <pre>
-          <code class="language-javascript">const myHome = { material: "wood", address: function () { console.log("Novosibirsk") } } myHome.address()</code>
+          <code class="language-javascript">
+              const myHome = { material: "wood", address: function () { console.log("Novosibirsk") } }
+              myHome.address()
+          </code>
         </pre>
     </div>
 
@@ -332,7 +350,12 @@
 <div class="flex-container">
     <div class="flex-div">
         <pre>
-          <code class="language-javascript">// JSON.stringify let car = { color: "red", price: 10 } const div_JSON2 = document.getElementById('div_JSON2'); div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)</code>
+          <code class="language-javascript">
+              // JSON.stringify
+              let car = { color: "red", price: 10 }
+              const div_JSON2 = document.getElementById('div_JSON2');
+              div_JSON2.innerHTML += "&ltbr/&gt" + JSON.stringify(car)
+          </code>
         </pre>
     </div>
 
@@ -349,7 +372,13 @@
 <div class="flex-container">
     <div class="flex-div">
         <pre>
-          <code class="language-javascript">// -------Мутации в JS. Переменные ------- let num = 123; div_mutation.innerHTML += "num = " + num + "&lt;br/&gt;"; let other_num; other_num = num; div_mutation.innerHTML += "other_num = " + other_num + "&lt;br/&gt;"; other_num = 12345; div_mutation.innerHTML += "num = " + num + "&lt;br/&gt;"; div_mutation.innerHTML += "other_num = " + other_num + "&lt;br/&gt;";</code>
+          <code class="language-javascript">
+              // -------Мутации в JS. Переменные -------
+              let num = 123; div_mutation.innerHTML += "num = " + num + "&lt;br/&gt;";
+              let other_num; other_num = num; div_mutation.innerHTML += "other_num = " + other_num + "&lt;br/&gt;";
+              other_num = 12345; div_mutation.innerHTML += "num = " + num + "&lt;br/&gt;";
+              div_mutation.innerHTML += "other_num = " + other_num + "&lt;br/&gt;";
+          </code>
         </pre>
     </div>
 
@@ -364,7 +393,14 @@
 <div class="flex-container">
     <div class="flex-div">
         <pre>
-          <code class="language-javascript">// -------Мутации в JS. Объекты ------- const div_mutation2 = document.getElementById("div_mutation2"); if (div_mutation2) &#123; const plane = &#123; weight: 10, &#125;; div_mutation2.innerHTML += "plane = " + JSON.stringify(plane) + "&lt;br/&gt;"; plane.manufacturer = "Russia"; div_mutation2.innerHTML += "plane = " + JSON.stringify(plane); &#125; else &#123; console.error("Element with id 'div_mutation2' does not exist."); &#125;</code>
+          <code class="language-javascript">
+              // -------Мутации в JS. Объекты -------
+              const div_mutation2 = document.getElementById("div_mutation2");
+              if (div_mutation2) &#123; const plane = &#123; weight: 10, &#125;;
+              div_mutation2.innerHTML += "plane = " + JSON.stringify(plane) + "&lt;br/&gt;";
+              plane.manufacturer = "Russia"; div_mutation2.innerHTML += "plane = " + JSON.stringify(plane);
+              &#125; else &#123; console.error("Element with id 'div_mutation2' does not exist."); &#125;
+          </code>
         </pre>
     </div>
 
@@ -393,6 +429,9 @@
 
 <script>
     // мутация через копию
+    const plane = {
+        weight: 10,
+    };
     const plane2 = plane
     plane2.loadCapacity = 100 // грузоподъемность
     console.log(plane2)
@@ -630,7 +669,7 @@
 <h3>Постфиксная запись</h3>
 <pre>оператор после операнд a++ например my_fn () тоже Постфиксная запись</pre>
 <h3>Приоритетность операторов</h3>
-<pre>гуглится по табличке в интернете'</pre>
+<pre>Гуглится по табличке в интернете'</pre>
 <h3>Логические операторы</h3>
 <pre>! унарные, префиксный &&, логическое И бинарный || логическое ИЛИ бинарный</pre>
 <script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>кнопки</title>
+    <style>
+        button:hover {
+            color: blue;
+        }
+        button {
+            background: aqua ;
+            border: none;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">Click me</button>
+
+
+
+
+    <script>
+    document.getElementById('myButton').onclick = function() {
+    
+    // Проверяем текущий цвет кнопки
+    var myButtonColor = document.getElementById('myButton').style.backgroundColor;
+
+    // Если текущий цвет кнопки красный, меняем его на исходный (например, синий)
+    // Если текущий цвет кнопки не красный, меняем его на красный
+    if (myButtonColor === 'red') {
+        document.getElementById('myButton').style.backgroundColor = 'blue';
+    } else {
+        document.getElementById('myButton').style.backgroundColor = 'red';
+    }
+
+};
+
+
+
+    </script>
+</body>
+</html>

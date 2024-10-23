@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Печать центрального DIV</title>
+    <style>
+        /* Основные стили */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 столбца */
+            grid-gap: 10px;
+            /* отступы между блоками */
+        }
+
+        .container div {
+            background-color: lightgrey;
+            /* фон блоков */
+            border: 1px solid #000;
+            /* рамка */
+            padding: 20px;
+            /* отступы внутри блока */
+            text-align: center;
+            /* выравнивание текста */
+        }
+
+        /* Стили для печати */
+        @media print {
+
+            /* Скрываем все блоки */
+            .container div {
+                display: none;
+            }
+
+            /* Показываем только центральный блок */
+            .container div:nth-child(5) {
+                display: flex;
+            }
+
+            .container div:nth-child(8) {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <img src="images/Logo Sibplc.png" alt="" />
+                            <h2>Бланк-заявка для автоматики вентиляции</h2>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">Номер заявки</td>
+                        <td>Будет присвоен после рассмотрения заявки</td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">Организация</td>
+                        <td contenteditable="true" spellcheck="false">Необязательно</td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">Адрес</td>
+                        <td contenteditable="true" spellcheck="false">Необязательно</td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">Контактное лицо</td>
+                        <td contenteditable="true" spellcheck="false">Необязательно</td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">E-mail</td>
+                        <td contenteditable="true" spellcheck="false">Необязательно</td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">Телефон</td>
+                        <td class="td2" contenteditable="true" spellcheck="false">Обязательно</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div> <!-- Этот DIV будет распечатан -->
+        <div>6</div>
+        <div>7</div>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <img src="images/Logo Sibplc.png" alt="" />
+                            <h2>Бланк-заявка для автоматики вентиляции</h2>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">Номер заявки</td>
+                        <td>Будет присвоен после рассмотрения заявки</td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">Организация</td>
+                        <td contenteditable="true" spellcheck="false">Необязательно</td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">Адрес</td>
+                        <td contenteditable="true" spellcheck="false">Необязательно</td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">Контактное лицо</td>
+                        <td contenteditable="true" spellcheck="false">Необязательно</td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">E-mail</td>
+                        <td contenteditable="true" spellcheck="false">Необязательно</td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">Телефон</td>
+                        <td class="td2" contenteditable="true" spellcheck="false">Обязательно</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+</body>
+
+</html>

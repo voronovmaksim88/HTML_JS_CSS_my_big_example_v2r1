@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title> Modal window</title>
+  <meta charset="utf-8">
+  <style>
+    .container {
+      display: grid;
+      /* Будет создано 3 колонки */
+      grid-template-columns: [col1] 100px [col2] 100px [col3] 100px;
+      /* Будет создано 3 ряда, правильно указываем имена рядов: row1, row2, row3 */
+      grid-template-rows: [row1] 100px [row2] 100px [row3] 100px;
+    }
+
+    /* Стиль для дочерних элементов, чтобы сделать границы видимыми */
+    .container>div {
+      border: 2px solid black;
+      /* Добавляем черную границу */
+      display: flex;
+      justify-content: center;
+      /* Центрируем содержимое по горизонтали */
+      align-items: center;
+      /* Центрируем содержимое по вертикали */
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- Пример размещения элементов в контейнере -->
+    <div style="grid-column: col1; grid-row: row1;">Блок 1</div>
+    <div style="grid-column: col2; grid-row: row2;">Блок 2</div>
+    <div style="grid-column: col3; grid-row: row3;">Блок 3</div>
+  </div>
+</body>
+
+</html>

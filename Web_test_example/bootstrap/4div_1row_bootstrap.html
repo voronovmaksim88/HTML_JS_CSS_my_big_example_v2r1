@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прямоугольники со скругленными краями</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        .rectangle {
+            height: 100px;
+            /* Высота прямоугольника */
+            background-color: #007bff;
+            /* Цвет фона, используйте любой цвет по вашему выбору */
+            box-shadow: 0 0 20px rgba(26, 9, 9, 0.4);
+        }
+
+        .white_text {
+            color: azure
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="rectangle rounded-4 p-1">
+                    <p class="white_text">Тут какой-то текст</p>
+                    <hr>
+                    <p>и ещё какой-то текст</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="rectangle rounded-4 p-1"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="rectangle rounded-4 p-1"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="rectangle rounded-4 p-1"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

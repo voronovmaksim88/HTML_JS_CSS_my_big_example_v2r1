@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Таблица</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Подключаем библиотеку стилей CSS от bootstrap -->
+    <!-- https://bootstrapshuffle.com/classes - тут описание всех классов есть -->
+    <style>
+        button:hover {
+            color: blue;
+        }
+
+        button {
+            background: aqua;
+            border: none;
+            width: 100%;
+            text-align: center;
+        }
+        .table tbody tr td.hover-darker:hover {
+  background-color: #f0f0f0;
+    </style>
+</head>
+
+<body>
+    <div class="container text-center my-5">
+        <!-- Элемент <div> является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого.
+    container - класса из библиотеки bootstrap
+    text-center - тоже класс из библиотеки bootstrap, чтобы отцентровать текст и картинку -->
+        <!-- my-5 - отступ по вертикали 5 чегототам -->
+
+        <div class="row">
+            <!-- class="row" - внутри контейнера создаём типа строку -->
+<!-- table-striped  -->
+            <table id="myTable" class="table table-bordered">
+                <tr>
+                    <th>
+                        Заявка
+                        <a class="btn btn-secondary" id="myButton1" onclick="sort_table_by_order_num()"> 1-9 </a>
+                    </th>
+
+                    <td>
+                        <b>Заказчик</b>
+                        <a class="btn btn-secondary" id="myButton2" onclick="sort_table_by_customer()"> A-C </a>
+                    </td>
+
+                    <td>
+                        <b>Приоритет</b>
+                        <a class="btn btn-secondary" id="myButton3"> 1-9 </a>
+                    </td>
+                </tr>
+                <tr id="str_1">
+                    <td class="hover-darker">2</td>
+                    <td class="hover-darker">A</td>
+                    <td class="hover-darker">1</td>
+                </tr>
+                <tr id="str_2">
+                    <td class="hover-darker">3</td>
+                    <td class="hover-darker">C</td>
+                    <td class="hover-darker">2</td>
+                </tr>
+                <tr id="str_3">
+                    <td class="hover-darker">1</td>
+                    <td class="hover-darker">B</td>
+                    <td class="hover-darker">3</td>
+                </tr>
+                <tr id="str_4" class="table-info">
+                    <td class="hover-darker">1</td>
+                    <td class="hover-darker">C</td>
+                    <td class="hover-darker">2</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <div class="container text-center my-5">
+        <a class="btn btn-secondary" id="clear_table" onclick="clear_table()"> очистить таблицу </a>
+    </div>
+
+    <script>
+        function clear_table() {
+            // alert("ща почистим талицу !")
+            var table = document.getElementById("myTable");
+            for (var i = table.rows.length - 1; i > 0; i--) {
+                table.deleteRow(i);
+            }
+        }
+    </script>
+
+
+    <script>
+        // Представим, что переменная jsonData содержит JSON-строку, полученную от сервера
+        jsonData = '[{"id": 3, "customer": "A"}, {"id": 2, "customer": "B"}, {"id": 1, "customer": "C"}, {"id": 4, "customer": "D"}]';
+        // Разбираем JSON-строку в массив объектов
+        var data = JSON.parse(jsonData);
+        document.write("hello word from JS", "<br>");
+        document.write(jsonData, "<br>");
+        document.write(data, "<br>");
+        // Находим объект с id равным 2
+        var objectWithId2 = data.find(function (item) {
+            return item.id === 2;
+        });
+
+        // Проверяем, существует ли объект с таким id
+        if (objectWithId2) {
+            // Создаём новый элемент div для вывода на страницу
+            var div = document.createElement('div');
+
+            // Задаём текстовое содержимое div-элемента, используя свойство 'customer' найденного объекта
+            div.textContent = objectWithId2.customer;
+
+            // Добавляем div-элемент в body документа
+            document.body.appendChild(div);
+            document.write("<br>");
+        } else {
+            console.log('Объект с id=2 не найден');
+        }
+
+        for (var i = 0; i < data.length; i++) {
+            document.write(data[i].id, " ", data[i].customer, "<br>"); // Выводим свойство customer каждого объекта
+        }
+
+        // Сортируем данные по какому-либо ключу, например 'id'
+        data.sort(function (a, b) {
+            return a.id - b.id;
+        });
+
+        document.write("<br>");
+        for (var i = 0; i < data.length; i++) {
+            document.write(data[i].id, " ", data[i].customer, "<br>"); // Выводим свойство customer каждого объекта
+        }
+    </script>
+
+    <div class="container text-center my-5">
+        <a class="btn btn-secondary" id="add_data_in_table" onclick="add_data_in_table()"> Заполнить таблицу данными
+        </a>
+    </div>
+
+    <script>
+
+        function add_data_in_table() {
+            // alert("ща данные как внесём !!!!")
+            // Находим таблицу по ID
+            var table = document.getElementById("myTable");
+
+            for (var i = 0; i < data.length; i++) {
+                var row = table.insertRow();
+
+                // Создаем ячейки в новой строке
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+
+                // Устанавливаем содержимое ячеек
+                cell1.innerHTML = data[i].id;
+                cell2.innerHTML = data[i].customer;
+                cell3.innerHTML = "Новое значение " + i;
+
+                cell1.classList.add("hover-darker");
+                cell2.classList.add("hover-darker");
+
+            }
+        }
+
+    </script>
+
+    <script>
+        function sort_table_by_order_num() {
+            data.sort(function (a, b) {
+                return a.id - b.id;
+            });
+            clear_table()
+            add_data_in_table()
+            console.log("сортируем по id")
+            console.log(data)
+        }
+
+        function sort_table_by_customer() {
+            var sortedData = data.sort(function (a, b) {
+                var customerA = a.customer.toUpperCase();
+                var customerB = b.customer.toUpperCase();
+
+                if (customerA < customerB) {
+                    return -1;
+                }
+                if (customerA > customerB) {
+                    return 1;
+                }
+
+                return 0;
+            });
+            clear_table()
+            add_data_in_table()
+            console.log("сортируем по customer")
+            console.log(data)
+        }
+
+    </script>
+
+</body>
+
+</html>

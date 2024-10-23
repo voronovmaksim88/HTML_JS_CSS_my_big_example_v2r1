@@ -1,0 +1,93 @@
+html,
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* Устанавливаем минимальную высоту равную высоте вьюпорта */
+  min-width: 100vw;
+  /* Устанавливаем минимальную ширину равную ширине вьюпорта */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: calibri;
+}
+
+.flex-div-print {
+  background-color: lightgrey;
+  width: 21cm;
+  /* Ширина листа А4 */
+  height: 29cm;
+  /* Высота листа А4 */
+  margin: 0cm auto;
+  /* Отступы сверху и снизу (по вертикали) */
+  page-break-after: always;
+  /* Добавляет разрыв страницы при печати документа после заданного элемента. */
+  box-sizing: border-box;
+  /* Добавляем небольшое тень для лучшей визуализации на экране, не нужно для печати */
+  box-shadow: 0 0 40px rgb(197, 197, 197);
+  display: block;
+  flex-grow: 1;
+  /* Элементы будут расти, чтобы заполнить доступное пространство */
+  /* Дополнительные стили для наглядности */
+  border: 1px solid rgb(0, 255, 0);
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  /* Использует flexbox для контейнера */
+  /* Дополнительные стили для наглядности */
+  border: 1px solid black;
+}
+
+.flex-div {
+  flex-grow: 1;
+  /* Элементы будут расти, чтобы заполнить доступное пространство */
+  /* Дополнительные стили для наглядности */
+  border: 1px solid rgb(0, 255, 0);
+  box-sizing: border-box;
+}
+
+/* Стили для печати */
+@media print {
+
+  /* Скрываем все блоки */
+  .flex-container .flex-div,
+  .flex-container .flex-div-print {
+    display: none;
+  }
+
+  /* Показываем только особые блоки, в данном случае нет условия для показа, 
+ так как в оригинальном запросе не описано, какой блок(и) должны оставаться видимыми при печати.
+ Если, например, нужно оставить видимым "Div 2", селектор можно скорректировать: */
+  .flex-container .flex-div-print {
+    display: block;
+    /* или любое другое подходящее значение display */
+  }
+}
+
+table {
+  border: 0px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+td {
+  background-color: Silver;
+  border: 1px solid black;
+  padding: 6px;
+}
+
+.td1 {
+  border: 1px solid black;
+  padding: 6px;
+  font-weight: bold;
+}
+
+.td2 {
+  border: 1px solid black;
+  padding: 6px;
+  color: darkred;
+}
